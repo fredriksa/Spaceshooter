@@ -8,6 +8,8 @@ class GameWindow < Gosu::Window
   def initialize
     super HEIGHT, WIDTH, FULLSCREEN
     self.caption = NAME
+
+    @state_manager = GameStateManager.new(self)
   end
   
   def draw
