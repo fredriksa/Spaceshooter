@@ -8,4 +8,6 @@ class GameWindow < Gosu::Window
     self.caption = NAME
   end
   
+  def draw
+  end
 end
