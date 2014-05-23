@@ -14,3 +14,5 @@ class GameWindow < Gosu::Window
   def update
   end
 end
+
+game = GameWindow.new
