@@ -14,5 +14,6 @@ class Entity
   end
 
   def die
+    @alive = false
   end
 end
