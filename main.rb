@@ -10,4 +10,7 @@ class GameWindow < Gosu::Window
   
   def draw
   end
+
+  def update
+  end
 end
