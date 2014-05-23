@@ -9,4 +9,7 @@ class Play
   def update
 
   end
+
+  def on_load
+  end
 end
