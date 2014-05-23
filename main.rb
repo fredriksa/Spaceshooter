@@ -17,6 +17,7 @@ class GameWindow < Gosu::Window
   end
 
   def update
+    @state_manager.update
   end
 end
 
