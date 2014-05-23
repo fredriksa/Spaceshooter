@@ -16,4 +16,8 @@ class Entity
   def die
     @alive = false
   end
+
+  def draw
+  	@image.draw(@x, @y, ZOrder::Entity_Default)
+  end
 end

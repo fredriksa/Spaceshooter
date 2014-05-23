@@ -7,7 +7,6 @@ class Play
   end
 
   def update
-
   end
 
   def on_load
