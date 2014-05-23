@@ -8,4 +8,7 @@ class Entity
     @velocity_x, velocity_y = 0, 0
     @alive = true
   end
+
+  def alive?
+  end
 end
