@@ -29,9 +29,7 @@ class GameStateManager
   end
 
   def add(gamestate)
-    if @gamestates.size > 0 == false
-      gamestate.on_load
-    end
+    gamestate.on_load if @gamestates.size < 0 == false
 
     @gamestates << gamestate
   end
