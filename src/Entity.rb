@@ -8,6 +8,10 @@ class Entity
     @velocity_x, velocity_y = 0, 0
     @alive = true
   end
+
+  def draw
+    @image.draw(@x, @y, ZOrder::Entity_Default)
+  end
   
   def alive?
     @alive
@@ -15,9 +19,5 @@ class Entity
 
   def die
     @alive = false
-  end
-
-  def draw
-    @image.draw(@x, @y, ZOrder::Entity_Default)
   end
 end
