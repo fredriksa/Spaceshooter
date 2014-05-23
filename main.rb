@@ -1,5 +1,5 @@
 require 'gosu'
 
-class GameWindow
+class GameWindow < Gosu::Window
 
 end
