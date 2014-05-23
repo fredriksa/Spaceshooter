@@ -10,7 +10,7 @@ class Entity
   end
   
   def alive?
-  	@alive
+    @alive
   end
 
   def die
@@ -18,6 +18,6 @@ class Entity
   end
 
   def draw
-  	@image.draw(@x, @y, ZOrder::Entity_Default)
+    @image.draw(@x, @y, ZOrder::Entity_Default)
   end
 end
