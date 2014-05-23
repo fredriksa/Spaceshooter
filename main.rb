@@ -1,6 +1,8 @@
 require 'gosu'
 
 require_relative 'src/GameStateManager.rb'
+require_relative 'src/ResourceManager.rb'
+
 require_relative 'src/gamestates/play.rb'
 
 class GameWindow < Gosu::Window
