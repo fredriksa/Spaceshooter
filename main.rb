@@ -5,6 +5,7 @@ class GameWindow < Gosu::Window
   
   def initialize
     super HEIGHT, WIDTH, FULLSCREEN
+    self.caption = NAME
   end
   
 end
