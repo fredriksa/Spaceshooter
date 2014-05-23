@@ -10,6 +10,6 @@ class ResourceManager
   end
 
   def get(key)
-    
+    @resources[key]  
   end
 end
