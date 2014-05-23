@@ -16,3 +16,4 @@ class GameWindow < Gosu::Window
 end
 
 game = GameWindow.new
+game.show
