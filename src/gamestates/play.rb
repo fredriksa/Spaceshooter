@@ -1,0 +1,2 @@
+class Play
+end
