@@ -11,6 +11,7 @@ class GameWindow < Gosu::Window
     self.caption = NAME
 
     @state_manager = GameStateManager.new(self)
+    @state_manager.add(Play.new(self))
   end
   
   def draw
