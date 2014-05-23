@@ -21,6 +21,14 @@ class GameWindow < Gosu::Window
   def update
     @state_manager.update
   end
+  
+  def button_down(id)
+    @state_manager.handle_input(id, "down")
+  end
+
+  def button_up(id)
+    @state_manager.handle_input(id, "up")
+  end
 end
 
 game = GameWindow.new
