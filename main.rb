@@ -7,6 +7,10 @@ require_relative 'src/Entity.rb'
 
 require_relative 'src/gamestates/play.rb'
 
+module ZOrder
+
+end
+
 class GameWindow < Gosu::Window
   HEIGHT, WIDTH, FULLSCREEN, NAME = 640, 480, false, "Spaceshooter"
   
