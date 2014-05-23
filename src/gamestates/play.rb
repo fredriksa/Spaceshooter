@@ -5,4 +5,7 @@ class Play
 
   def draw
   end
+
+  def update
+  end
 end
