@@ -8,7 +8,7 @@ require_relative 'src/Entity.rb'
 require_relative 'src/gamestates/play.rb'
 
 module ZOrder
-
+  Entity_Default = 1000
 end
 
 class GameWindow < Gosu::Window
