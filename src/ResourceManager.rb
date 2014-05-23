@@ -5,6 +5,6 @@ class ResourceManager
   end
 
   def load_image(key, path)
-    @resources = Gosu::Image.new()
+    @resources[key] = Gosu::Image.new(@window, path, false) if @resources[key].nil?
   end
 end
