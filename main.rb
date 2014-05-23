@@ -1,6 +1,7 @@
 require 'gosu'
 
 require_relative 'src/GameStateManager.rb'
+require_relative 'src/gamestates/play.rb'
 
 class GameWindow < Gosu::Window
   HEIGHT, WIDTH, FULLSCREEN, NAME = 640, 480, false, "Spaceshooter"
