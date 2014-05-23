@@ -1,3 +1,0 @@
-class MoveableEntity
-
-end
