@@ -10,5 +10,6 @@ class Entity
   end
 
   def alive?
+  	@alive
   end
 end
