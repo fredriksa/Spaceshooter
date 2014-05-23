@@ -1,5 +1,5 @@
 class Play
-  def initialize
+  def initialize(window)
   
   end
 
@@ -7,5 +7,6 @@ class Play
   end
 
   def update
+
   end
 end
