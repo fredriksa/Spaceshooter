@@ -13,6 +13,7 @@ class GameWindow < Gosu::Window
   end
   
   def draw
+    @state_manager.draw
   end
 
   def update
