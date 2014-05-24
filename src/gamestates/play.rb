@@ -17,7 +17,11 @@ class Play < GameState
     @objects << @player
     @objects << @background
     @objects += @player.projectiles
-    @objects << generate_loot
+    
+    if @loot_spawn_counter > @loot_spawn_timer
+      @objects << generate_loot
+    end
+    
     @cm.update(@objects)
     @cm.get_surrounding_objects(@player)
   end
