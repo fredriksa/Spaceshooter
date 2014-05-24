@@ -13,6 +13,9 @@ class FloatingEntity < Entity
     end
   end
 
+  def accelerate
+  end
+
   def update
     super
     move
