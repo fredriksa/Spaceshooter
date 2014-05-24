@@ -1,4 +1,9 @@
 class FloatingEntity < Entity
+  def update
+    super
+    move
+  end
+
   def move
     if @x + @velocity_x < GameWindow::WIDTH and @x + @velocity_x > 0
       @x += @velocity_x
@@ -17,8 +22,7 @@ class FloatingEntity < Entity
 
   end
 
-  def update
-    super
-    move
+  def accelerate_right
+
   end
 end
