@@ -13,6 +13,8 @@ require_relative 'src/gamestates/play.rb'
 
 module ZOrder
   Entity_Default = 1000
+  Background_Cover = 55
+  Background_Solid = 50
 end
 
 class GameWindow < Gosu::Window
