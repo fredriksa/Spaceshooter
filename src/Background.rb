@@ -16,5 +16,6 @@ class Background < FloatingEntity
   end
 
   def update
+    move_y
   end
 end
