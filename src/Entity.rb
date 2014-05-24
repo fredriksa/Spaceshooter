@@ -24,4 +24,7 @@ class Entity
   def die
     @alive = false
   end
+
+  def on_collide
+  end
 end
