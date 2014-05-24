@@ -23,6 +23,8 @@ class Play < GameState
     @rm.load_image("player", "./assets/player.png")
     @rm.load_image("player_left", "./assets/player_left.png")
     @rm.load_image("player_right", "./assets/player_right.png")
+    @rm.load_image("player_projectile", "./assets/player_projectile.png")
+
     @rm.load_image("background_solid", "./assets/background_solid.png")
     @rm.load_image("background_stars", "./assets/background_stars.png")
   end
