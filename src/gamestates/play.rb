@@ -15,6 +15,7 @@ class Play < GameState
 
   def update
     super
+    @cm.update(@objects)
   end
 
   def on_load
