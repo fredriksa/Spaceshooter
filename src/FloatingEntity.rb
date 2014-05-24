@@ -13,7 +13,8 @@ class FloatingEntity < Entity
     end
   end
 
-  def accelerate
+  def accelerate_left
+
   end
 
   def update
