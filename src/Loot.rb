@@ -29,4 +29,8 @@ class Loot < FloatingEntity
     die if @y > GameWindow::HEIGHT
     move_y
   end
+
+  def on_collide
+    die
+  end
 end
