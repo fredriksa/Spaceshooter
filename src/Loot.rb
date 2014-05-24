@@ -21,7 +21,7 @@ class Loot < FloatingEntity
 
   def update
     super
-    die if self.out_of_screen?
+    die if @y > GameWindow::HEIGHT
     move_y
   end
 end
