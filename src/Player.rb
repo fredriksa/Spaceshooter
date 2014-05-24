@@ -19,13 +19,6 @@ class Player < SpaceshipFighter
     
     accelerate_left if @KbLeft
     accelerate_right if @KbRight
-    
-    if @velocity_x < -2
-      @image_index = 1
-    elsif @velocity_x > 2
-      @image_index = 2
-    else
-      @image_index = 0
     end
   end
 end
