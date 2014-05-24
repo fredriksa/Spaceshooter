@@ -8,7 +8,7 @@ class ContentManager
   def update(objects)
     clean_array
     objects.each do |object|
-      @content_grid[object.y/@grid_height][object.x/@grid_width] = object
+      @content_grid[(object.y/@grid_height).round][(object.x/@grid_width).round] = object
     end  
   end
 
@@ -16,7 +16,6 @@ class ContentManager
     ((object.x/@grid_width-1).round..(object.x/@grid_width+1).round).each do |x|
       ((object.y/@grid_height-1).round..(object.y/@grid_height+1).round).each do |y|
         if @content_grid[y][x] != nil and object != @content_grid[y][x]
-          p @content_grid[y][x]
         end
       end
     end
