@@ -1,5 +1,5 @@
 class Background
-  def initialize(*images)
+  def initialize(solid, cover)
   end
 
   def draw
