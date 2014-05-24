@@ -15,7 +15,7 @@ module ZOrder
 end
 
 class GameWindow < Gosu::Window
-  HEIGHT, WIDTH, FULLSCREEN, NAME = 640, 480, false, "Spaceshooter"
+  WIDTH, HEIGHT, FULLSCREEN, NAME = 640, 480, false, "Spaceshooter"
   
   def initialize
     super HEIGHT, WIDTH, FULLSCREEN
