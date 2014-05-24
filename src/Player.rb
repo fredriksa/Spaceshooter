@@ -3,7 +3,7 @@ class Player < SpaceshipFighter
   attr_accessor :KbLeft, :KbRight
 
   def initialize(images, projectile_image, x, y, hp, speed, speed_damper = 1)
-    super images, projectile_image, x, y, WIDTH, HEIGHT, hp, speed, speed_damper
+    super images, projectile_image, x, y, WIDTH, HEIGHT, hp, speed, "Player", speed_damper
     @KbLeft = false
     @KbRight = false
   end
@@ -20,9 +20,9 @@ class Player < SpaceshipFighter
     accelerate_left if @KbLeft
     accelerate_right if @KbRight
     
-    if @velocity_x < -1.9
+    if @velocity_x < -2
       @image_index = 1
-    elsif @velocity_x > 1.9
+    elsif @velocity_x > 2
       @image_index = 2
     else
       @image_index = 0
