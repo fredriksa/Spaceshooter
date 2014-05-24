@@ -12,4 +12,9 @@ class FloatingEntity
       @velocity_y *= 0.95
     end
   end
+
+  def update
+    super
+    move
+  end
 end
