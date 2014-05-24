@@ -5,6 +5,7 @@ class Background
   end
 
   def draw
+    @solid.draw(0, 0, ZOrder::Background_Solid)
   end
 
   def update
