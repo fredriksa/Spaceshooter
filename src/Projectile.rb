@@ -1,5 +1,7 @@
 class Projectile < FloatingEntity
-  def initialize
+  def initialize(images, x, y, hp, speed, velocity_x, velocity_y, speed_damper = 1)
+    super images, x, y, hp, speed, speed_damper
+    @veloicty_x, @velocity_y = velocity_x, velocity_y
   end
 
   def update
