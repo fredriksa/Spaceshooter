@@ -2,8 +2,8 @@ class Player < FloatingEntity
   WIDTH, HEIGHT = 27, 22
   attr_accessor :KbLeft, :KbRight
 
-  def initialize(images, x, y, hp, speed)
-    super images, x, y, hp, speed
+  def initialize(images, x, y, hp, speed, speed_damper = 1)
+    super images, x, y, hp, speed, speed_damper
     @KbLeft = false
     @KbRight = false
   end
