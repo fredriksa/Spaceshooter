@@ -11,12 +11,10 @@ class Player < FloatingEntity
   def update
     super
     
-    if @x + @velocity_x < GameWindow::WIDTH and @x + @velocity_x > 0
+    if @x + @velocity_x + WIDTH < GameWindow::WIDTH and @x + @velocity_x > 0
       move_x
-    end
-
-    if @y + @velocity_y < GameWindow::HEIGHT and @y + @velocity_y > 0
-      move_y
+    else
+      @velocity_x = 0 
     end
 
     accelerate_left if @KbLeft 
