@@ -6,6 +6,9 @@ class GameState
   end
 
   def draw
+    @drawables.each do |drawable|
+      drawable.draw
+    end
   end
 
   def update
