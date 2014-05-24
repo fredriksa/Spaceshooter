@@ -1,9 +1,9 @@
-class Player < FloatingEntity
+class Player < SpaceshipFighter
   WIDTH, HEIGHT = 27, 22
   attr_accessor :KbLeft, :KbRight
 
   def initialize(images, x, y, hp, speed, speed_damper = 1)
-    super images, x, y, hp, speed, speed_damper
+    super images, images[3], x, y, hp, speed, speed_damper
     @KbLeft = false
     @KbRight = false
   end
