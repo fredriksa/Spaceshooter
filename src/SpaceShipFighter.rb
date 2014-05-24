@@ -6,14 +6,21 @@ class SpaceshipFighter < FloatingEntity
     @damage = 25
   end
 
-  def fire
-    @projectiles << Projectile.new(projectile_image, @x, @y, 10, 2.5, 1)
-  end
-
   def draw
     super
     @projectiles.each do |projectile|
       projectile.draw
     end
+  end
+
+  def update
+    super
+    @projectiles.each do |projectile|
+      projectile.update
+    end
+  end
+
+  def fire
+    @projectiles << Projectile.new(projectile_image, @x, @y, 10, 2.5, 1)
   end
 end
