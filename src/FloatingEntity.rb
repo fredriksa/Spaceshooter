@@ -1,4 +1,4 @@
-class FloatingEntity
+class FloatingEntity < Entity
   def move
     if @x + @velocity_x < GameWindow::WIDTH and @x + @velocity_x > 0
       @x += @velocity_x
