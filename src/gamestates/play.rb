@@ -1,5 +1,5 @@
 class Play < GameState
-  extend RectangularCollision
+  include RectangularCollision
 
   def initialize(window)
     super
@@ -28,9 +28,11 @@ class Play < GameState
     
     @cm.update(@objects)
     @cm.get_surrounding_objects(@player).each do |object|
+      puts object.class
       if rectangular_collision?(@player, object)
         @player.on_collision
         object.on_collision
+
 
         case object.type
         when "Health"
