@@ -10,5 +10,8 @@ class Player < FloatingEntity
 
   def update
     super
+    
+    accelerate_left if @KbLeft 
+    accelerate_right if @KbRight
   end
 end
