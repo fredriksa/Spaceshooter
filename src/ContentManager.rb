@@ -1,5 +1,5 @@
 class ContentManager
-  def update
-    
+  def update(objects)
+
   end
 end
