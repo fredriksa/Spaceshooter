@@ -21,6 +21,8 @@ class ContentManager
         end
       end
     end
+
+    return surrounding_objects
   end
 
   def clean_array
