@@ -1,5 +1,5 @@
 class Background < FloatingEntity
-  def initialize(solid, cover, double_cover = false)
+  def initialize(solid, cover, speed, double_cover = false)
     @solid = solid
     @cover = cover
     @double_cover = double_cover
@@ -8,7 +8,7 @@ class Background < FloatingEntity
     @y2 = -500
 
     @velocity_y = 1
-    @speed, @speed_damper = 1, 1
+    @speed, @speed_damper = speed, 1
   end
 
   def draw
