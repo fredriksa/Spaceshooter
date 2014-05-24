@@ -1,6 +1,6 @@
 class Player < SpaceshipFighter
   WIDTH, HEIGHT = 27, 22
-  attr_accessor :KbLeft, :KbRight, :width, :height
+  attr_accessor :KbLeft, :KbRight, :width, :height, :ammo
 
   def initialize(images, projectile_image, x, y, hp, speed, speed_damper = 1)
     super images, projectile_image, x, y, hp, speed, "Player", speed_damper
