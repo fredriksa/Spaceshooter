@@ -11,4 +11,7 @@ class GameState
   def on_load
   end
 
+  def on_exit
+  end
+
 end
