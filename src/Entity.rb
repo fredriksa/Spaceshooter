@@ -1,5 +1,5 @@
 class Entity
-  attr_accessor :velocity_x, :velocity_y
+  attr_accessor :velocity_x, :velocity_y, :image_index
 
   def initialize(images, x, y, hp, speed)
     @images = images
