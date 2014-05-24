@@ -2,6 +2,7 @@ class GameState
   def initialize(window)
     @objects = []
     @rm = ResourceManager.new(window)
+    @cm = ContentManager.new
     on_load
   end
 
