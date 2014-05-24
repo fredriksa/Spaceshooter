@@ -30,8 +30,8 @@ class Play < GameState
     @cm.get_surrounding_objects(@player).each do |object|
       puts object.class
       if rectangular_collision?(@player, object)
-        @player.on_collision
-        object.on_collision
+        @player.on_collide
+        object.on_collide
 
 
         case object.type
