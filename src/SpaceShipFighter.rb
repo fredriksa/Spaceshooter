@@ -9,4 +9,11 @@ class SpaceshipFighter < FloatingEntity
   def fire
     @projectiles << Projectile.new(projectile_image, @x, @y, 10, 2.5, 1)
   end
+
+  def draw
+    super
+    @projectiles.each do |projectile|
+      projectile.draw
+    end
+  end
 end
