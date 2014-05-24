@@ -10,6 +10,7 @@ class Background < FloatingEntity
 
     @velocity_y = 1
     @speed, @speed_damper = speed, 1
+    @alive = true
   end
 
   def draw
