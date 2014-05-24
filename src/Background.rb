@@ -3,6 +3,9 @@ class Background < FloatingEntity
     @solid = solid
     @cover = cover
     @double_cover = double_cover
+
+    @velocity_x, @velocity_y = 0, 0
+    @speed = 1
   end
 
   def draw
