@@ -16,6 +16,7 @@ class Play < GameState
     @objects << @player
     @objects << @background
     @objects += @player.projectiles
+    @objects << generate_loot
     @cm.update(@objects)
     @cm.get_surrounding_objects(@player)
   end
@@ -30,7 +31,7 @@ class Play < GameState
     @rm.load_image("background_stars", "./assets/background_stars.png")
 
     @rm.load_image("health", "./assets/health.png")
-    @rm.load_images("ammo", "./assets/ammo.png")
+    @rm.load_image("ammo", "./assets/ammo.png")
   end
 
   def handle_input(key, type)
