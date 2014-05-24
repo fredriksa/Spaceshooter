@@ -1,10 +1,11 @@
 class Background < FloatingEntity
+  attr_accessor :x, :y
   def initialize(solid, cover, speed, double_cover = false)
     @solid = solid
     @cover = cover
     @double_cover = double_cover
     
-    @y = 0
+    @y, @x = 0, 0
     @y2 = -500
 
     @velocity_y = 1
