@@ -4,7 +4,7 @@ class Play < GameState
     @speed = 1
     @player = Player.new(@rm.get("player", "player_left", "player_right"), @rm.get("player_projectile"), GameWindow::WIDTH/2 - Player::WIDTH/2, GameWindow::HEIGHT - 50, 100, 1.5, 0.95)
     @background = Background.new(@rm.get("background_solid"), @rm.get("background_stars"), @speed, true)
-    @loot_spawn_counter, @loot_spawn_timer = 5*60, 0
+    @loot_spawn_timer, @loot_spawn_counter = 5*60, 0
   end
 
   def draw
@@ -20,8 +20,11 @@ class Play < GameState
     
     if @loot_spawn_counter > @loot_spawn_timer
       @objects << generate_loot
+      @loot_spawn_counter = 0
+    else
+      @loot_spawn_counter += 1
     end
-    
+
     @cm.update(@objects)
     @cm.get_surrounding_objects(@player)
   end
@@ -61,7 +64,7 @@ class Play < GameState
 
   def generate_loot
     random_number = rand(1)
-    return Loot.new("Health", @rm.get("health"), rand(30..GameWindow::WIDTH-30), -50, 20, @speed, @speed) if random_number == 0
-    return Loot.new("Ammo", @rm.get("ammo"), rand(30..GameWindow::WIDTH-30), -50, 20, @speed, @speed) if random_number == 1
+    return Loot.new("Health", @rm.get("health"), rand(30..GameWindow::WIDTH-30), -50, 20, 1.5, 2.5) if random_number == 0
+    return Loot.new("Ammo", @rm.get("ammo"), rand(30..GameWindow::WIDTH-30), -50, 20, 1.5, 2.5) if random_number == 1
   end
 end

@@ -23,7 +23,7 @@ class Background < FloatingEntity
 
   def update
     move_y
-
+    puts @y
     @y = -500 if @y >= GameWindow::HEIGHT
     @y2 = -500 if @y2 >= GameWindow::HEIGHT
   end

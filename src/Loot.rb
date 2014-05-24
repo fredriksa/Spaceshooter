@@ -18,4 +18,10 @@ class Loot < FloatingEntity
     ammo, @ammo = @ammo, 0
     return ammo
   end
+
+  def update
+    super
+    puts @y
+    move_y
+  end
 end
