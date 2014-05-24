@@ -28,6 +28,9 @@ class Play < GameState
 
     @rm.load_image("background_solid", "./assets/background_solid.png")
     @rm.load_image("background_stars", "./assets/background_stars.png")
+
+    @rm.load_image("health", "./assets/health.png")
+    @rm.load_images("ammo", "./assets/ammo.png")
   end
 
   def handle_input(key, type)
