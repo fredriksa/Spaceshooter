@@ -49,4 +49,7 @@ class Play < GameState
       end
     end
   end
+
+  def generate_loot
+  end
 end
