@@ -22,14 +22,14 @@ class Play < GameState
 
   def handle_input(key, type)
     if type == "down"
-      case type
+      case key
       when Gosu::KbLeft
         @player.KbLeft = true
       when Gosu::KbRight  
         @player.KbRight = true
       end    
     else
-      case type
+      case key
       when Gosu::KbLeft
         @player.KbLeft = false
       when Gosu::KbRight
