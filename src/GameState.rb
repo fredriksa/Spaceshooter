@@ -1,5 +1,8 @@
 class GameState
-  def initialize
+  def initialize(window)
+  end
+
+  def draw
   end
 
 end
