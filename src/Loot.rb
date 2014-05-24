@@ -1,8 +1,6 @@
 class Loot < FloatingEntity
-  def initialize(type, x, y, hp, velocity_y, speed, images = 0)
+  def initialize(type, rm, x, y, hp, velocity_y, speed)
     super image, x, y, hp, speed
-    @@types = {"Ammo" => 0, "Health" => 1}
-    @@images = images if @@images.nil?
-    @velocity_y = 1
+    @velocity_y = velocity_y
   end
 end
