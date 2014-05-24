@@ -1,4 +1,4 @@
 class Background
-  def initialize
+  def initialize(*images)
   end
 end
