@@ -1,5 +1,6 @@
 class GameState
   def initialize(window)
+    @rm = ResourceManager.new(window)
   end
 
   def draw
