@@ -1,12 +1,13 @@
 class Entity
-  attr_accessor :velocity_x, :velocity_y, :image_index, :x, :y
+  attr_accessor :velocity_x, :velocity_y, :image_index, :x, :y, :width, :height, :health
 
   def initialize(images, x, y, hp)
     @images = images
     @image_index = 0
     @x, @y = x, y
-    @hp = hp
+    @health = hp
     @alive = true
+    @width, @height = 0, 0
   end
 
   def draw
