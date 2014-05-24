@@ -5,7 +5,7 @@ class Background < FloatingEntity
     @double_cover = double_cover
     
     @y = 50
-    @velocity_x, @velocity_y = 0, 0
+    @velocity_x, @velocity_y = 1, 1
     @speed, @speed_damper = 1, 1
   end
 
