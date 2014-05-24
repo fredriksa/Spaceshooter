@@ -1,20 +1,19 @@
 class GameState
   def initialize(window)
-    @drawables = []
-    @updateables = []
+    @objects = []
     @rm = ResourceManager.new(window)
     on_load
   end
 
   def draw
-    @drawables.each do |drawable|
-      drawable.draw
+    @objects.each do |object|
+      object.draw
     end
   end
 
   def update
-    @updateables.each do |updateables|
-      updateables.update
+    @objects.each do |object|
+      object.update
     end
   end
 
