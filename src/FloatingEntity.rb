@@ -19,10 +19,10 @@ class FloatingEntity < Entity
   end
 
   def accelerate_left
-    @velocity_x -= Gosu::offset(90, @speed)
+    @velocity_x -= Gosu::offset_x(90, @speed)
   end
 
   def accelerate_right
-    @velocity_x += Gosu::offset(90, @speed)
+    @velocity_x += Gosu::offset_x(90, @speed)
   end
 end
