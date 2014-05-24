@@ -10,6 +10,12 @@ class Play < GameState
   def update
   end
 
+  def on_load
+    @rm.load_image("player", "./assets/player.png")
+    @rm.load_image("player_left", "./assets/player_left.png")
+    @rm.load_image("player_right", "./assets/plyaer_left.png")
+  end
+
   def handle_input(key, type)
     if type == "down"
       case type
