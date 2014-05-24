@@ -7,6 +7,7 @@ require_relative 'src/ResourceManager.rb'
 require_relative 'src/Entity.rb'
 require_relative 'src/FloatingEntity.rb'
 require_relative 'src/SpaceshipFighter.rb'
+require_relative 'src/Projectile.rb'
 
 require_relative 'src/Player.rb'
 require_relative 'src/Background.rb'
