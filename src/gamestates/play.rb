@@ -4,9 +4,6 @@ class Play < GameState
     @speed = 1
     @player = Player.new(@rm.get("player", "player_left", "player_right"), @rm.get("player_projectile"), GameWindow::WIDTH/2 - Player::WIDTH/2, GameWindow::HEIGHT - 50, 100, 1.5, 0.95)
     @background = Background.new(@rm.get("background_solid"), @rm.get("background_stars"), @speed, true)
-
-    @objects << @player
-    @objects << @background
   end
 
   def draw
@@ -15,6 +12,10 @@ class Play < GameState
 
   def update
     super
+    @objects = []
+    @objects << @player
+    @objects << @background
+    @objects += @player.projectiles
     @cm.update(@objects)
   end
 
