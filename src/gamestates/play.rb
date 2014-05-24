@@ -1,6 +1,6 @@
 class Play < GameState
-  extend RectangularCollisionModule
-  
+  extend RectangularCollision
+
   def initialize(window)
     super
     @speed = 1
@@ -28,7 +28,17 @@ class Play < GameState
     
     @cm.update(@objects)
     @cm.get_surrounding_objects(@player).each do |object|
-      
+      if rectangular_collision?(@player, object)
+        @player.on_collision
+        object.on_collision
+
+        case object.type
+        when "Health"
+          @player.health += object.get_health
+        when "Ammo"
+          @player.ammo += object.get_ammo
+        end
+      end  
     end
 
     @objects.each_with_index do |object, index|
