@@ -3,6 +3,7 @@ class Play < GameState
     super
     @player = Player.new(@rm.get("player", "player_left", "player_right"), GameWindow::WIDTH/2 - Player::WIDTH/2, GameWindow::HEIGHT - 50, 100, 0)
     @drawables << @player
+    @updateables << @player
   end
 
   def draw
@@ -10,6 +11,7 @@ class Play < GameState
   end
 
   def update
+    super
   end
 
   def on_load
