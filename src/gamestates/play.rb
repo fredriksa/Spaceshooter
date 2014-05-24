@@ -1,7 +1,7 @@
 class Play < GameState
   def initialize(window)
     super
-    @player = Player.new(@rm.get("player", "player_left", "player_right"), GameWindow::WIDTH/2 - Player::WIDTH/2, GameWindow::HEIGHT - 50, 100, 0)
+    @player = Player.new(@rm.get("player", "player_left", "player_right"), GameWindow::WIDTH/2 - Player::WIDTH/2, GameWindow::HEIGHT - 50, 100, 1.5)
     @drawables << @player
     @updateables << @player
   end
