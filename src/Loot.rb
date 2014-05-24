@@ -8,4 +8,7 @@ class Loot < FloatingEntity
 
   def get_health
   end
+
+  def get_ammo
+  end
 end
