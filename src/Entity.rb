@@ -2,7 +2,8 @@ class Entity
   attr_accessor :velocity_x, :velocity_y
 
   def initialize(images, x, y, hp, speed)
-    @images = image
+    @images = images
+    @image_index = 0
     @x, @y = x, y
     @hp = hp
     @speed = speed
@@ -11,7 +12,7 @@ class Entity
   end
 
   def draw
-    @image.draw(@x, @y, ZOrder::Entity_Default)
+    @images[image_index].draw(@x, @y, ZOrder::Entity_Default)
   end
   
   def alive?
