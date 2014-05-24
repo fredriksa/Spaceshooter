@@ -26,6 +26,10 @@ class Play < GameState
     
     @cm.update(@objects)
     @cm.get_surrounding_objects(@player)
+
+    @objects.each_with_index do |object, index|
+      @objects.delete_at(index) if !object.alive?
+    end
   end
 
   def on_load
