@@ -1,5 +1,5 @@
 class SpaceshipFighter < FloatingEntity
-  attr_accessor :projectiles
+  attr_accessor :projectiles, :ammo
   
   def initialize(images, projectile_image, x, y, hp, speed, type, speed_damper = 1)
     super images, x, y, hp, speed, speed_damper
@@ -7,6 +7,7 @@ class SpaceshipFighter < FloatingEntity
     @type = type
     @projectiles = []
     @damage = 25
+    @ammo = 0
   end
 
   def draw
