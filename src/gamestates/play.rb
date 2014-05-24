@@ -1,4 +1,4 @@
-class Play
+class Play < GameState
   def initialize(window)
     @rm = ResourceManager.new(window)
     @player = Player.new()
@@ -8,12 +8,6 @@ class Play
   end
 
   def update
-  end
-
-  def on_load
-  end
-
-  def on_exit
   end
 
   def handle_input(key, type)
