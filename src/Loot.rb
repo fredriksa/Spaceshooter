@@ -1,4 +1,4 @@
-class Loot
+class Loot < FloatingEntity
   def initialize
   end
 end
