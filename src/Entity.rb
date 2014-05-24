@@ -25,12 +25,4 @@ class Entity
   def die
     @alive = false
   end
-
-  def out_of_screen?
-    if @x > GameWindow::WIDTH || @x < 0 || @y > GameWindow::HEIGHT || @y < 0
-      return true
-    end
-
-    return false
-  end
 end
