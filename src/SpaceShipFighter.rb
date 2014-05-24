@@ -9,7 +9,7 @@ class SpaceshipFighter < FloatingEntity
   def draw
     super
     @projectiles.each do |projectile|
-      projectile.draw
+      projectile.draw if projectile.alive?
     end
   end
 
