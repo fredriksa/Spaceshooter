@@ -43,6 +43,8 @@ class Play < GameState
         @player.KbLeft = false
       when Gosu::KbRight
         @player.KbRight = false
+      when Gosu::KbSpace
+        @player.fire
       end
     end
   end
