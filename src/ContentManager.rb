@@ -13,5 +13,15 @@ class ContentManager
   end
 
   def get_surrounding_objects(object)
+    for x in object.x/@grid_width-1.round..object.x/@grid_width+1.round
+      puts x
+      for y in object.y/@grid_height-1.round..object.y/@grid_height+1.round
+        puts y
+        if @content_grid[y][x] != nil
+          puts "Found object"
+          p @content_grid[y][x]
+        end
+      end
+    end
   end
 end

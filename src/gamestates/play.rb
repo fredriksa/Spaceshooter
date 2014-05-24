@@ -17,6 +17,7 @@ class Play < GameState
     @objects << @background
     @objects += @player.projectiles
     @cm.update(@objects)
+    @cm.get_surrounding_objects(@player)
   end
 
   def on_load
