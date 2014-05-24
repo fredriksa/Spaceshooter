@@ -1,5 +1,5 @@
 class SpaceshipFighter < FloatingEntity
-  def initializedef(images, projectile_image, x, y, hp, speed, speed_damper = 1)
+  def initialize(images, projectile_image, x, y, hp, speed, speed_damper = 1)
     super images, x, y, hp, speed, speed_damper
     @projectile_image = projectile_image
     @projectiles = []
