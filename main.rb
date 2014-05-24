@@ -4,6 +4,8 @@ require_relative 'src/GameStateManager.rb'
 require_relative 'src/ResourceManager.rb'
 
 require_relative 'src/Entity.rb'
+require_relative 'src/FloatingEntity.rb'
+require_relative 'src/Player.rb'
 
 require_relative 'src/gamestates/play.rb'
 
