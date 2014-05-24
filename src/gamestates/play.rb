@@ -24,12 +24,16 @@ class Play < GameState
     if type == "down"
       case type
       when Gosu::KbLeft
+        @player.KbLeft = true
       when Gosu::KbRight  
+        @player.KbRight = true
       end    
     else
       case type
       when Gosu::KbLeft
+        @player.KbLeft = false
       when Gosu::KbRight
+        @player.KbRight = false
       end
     end
   end
