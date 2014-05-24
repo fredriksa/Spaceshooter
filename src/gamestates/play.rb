@@ -1,4 +1,6 @@
 class Play < GameState
+  extend RectangularCollisionModule
+  
   def initialize(window)
     super
     @speed = 1
@@ -25,7 +27,9 @@ class Play < GameState
     end
     
     @cm.update(@objects)
-    @cm.get_surrounding_objects(@player)
+    @cm.get_surrounding_objects(@player).each do |object|
+      
+    end
 
     @objects.each_with_index do |object, index|
       @objects.delete_at(index) if !object.alive?
