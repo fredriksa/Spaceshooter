@@ -16,6 +16,10 @@ class Play
   end
 
   def handle_input(key, type)
+    if type == "down"
+    
+    else
 
+    end
   end
 end
