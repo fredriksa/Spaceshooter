@@ -15,8 +15,9 @@ class SpaceshipFighter < FloatingEntity
 
   def update
     super
-    @projectiles.each do |projectile|
-      projectile.update
+    @projectiles.each_with_index do |projectile, index|
+      @projectiles.delete_at(index) if !projectile.alive?
+      projectile.update if projectile.alive?
     end
   end
 
