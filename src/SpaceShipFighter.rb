@@ -34,6 +34,6 @@ class SpaceshipFighter < FloatingEntity
   end
 
   def fire
-    @projectiles << Projectile.new(@projectile_image, @x + @width/2 - 2, @y, 10, 2.5, -10, @type)
+    @projectiles << Projectile.new(@projectile_image, @x + @width/2 - 2, @y, 10, 2.5, -5, @type)
   end
 end
