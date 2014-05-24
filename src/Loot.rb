@@ -21,7 +21,7 @@ class Loot < FloatingEntity
 
   def update
     super
-    puts @y
+    die if self.out_of_screen?
     move_y
   end
 end
