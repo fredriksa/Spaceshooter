@@ -5,4 +5,7 @@ class Loot < FloatingEntity
     @type = type
     @velocity_y = velocity_y
   end
+
+  def get_health
+  end
 end
