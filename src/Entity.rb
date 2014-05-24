@@ -14,6 +14,9 @@ class Entity
   def draw
     @images[@image_index].draw(@x, @y, ZOrder::Entity_Default)
   end
+
+  def update
+  end
   
   def alive?
     @alive
