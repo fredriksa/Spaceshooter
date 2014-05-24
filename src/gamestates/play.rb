@@ -1,6 +1,7 @@
 class Play
   def initialize(window)
     @rm = ResourceManager.new(window)
+    @player = Player.new()
   end
 
   def draw

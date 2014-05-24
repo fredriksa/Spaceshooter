@@ -1,6 +1,7 @@
 require 'gosu'
 
 require_relative 'src/GameStateManager.rb'
+require_relative 'src/GameState.rb'
 require_relative 'src/ResourceManager.rb'
 
 require_relative 'src/Entity.rb'
