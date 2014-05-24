@@ -9,7 +9,11 @@ class ResourceManager
     @resources[key] = Gosu::Image.new(@window, path, false) if @resources[key].nil?
   end
 
-  def get(*key)
-    @resources[key]
+  def get(*keys)
+    @resources[key] if keys.size == 1
+
+    keys.each do |key|
+      @resources[key]
+    end
   end
 end
