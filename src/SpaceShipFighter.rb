@@ -23,6 +23,14 @@ class SpaceshipFighter < FloatingEntity
       @projectiles.delete_at(index) if !projectile.alive?
       projectile.update if projectile.alive?
     end
+
+    if @velocity_x < -2
+      @image_index = 1
+    elsif @velocity_x > 2
+      @image_index = 2
+    else
+      @image_index = 0
+    end
   end
 
   def fire

@@ -19,6 +19,5 @@ class Player < SpaceshipFighter
     
     accelerate_left if @KbLeft
     accelerate_right if @KbRight
-    end
   end
 end
