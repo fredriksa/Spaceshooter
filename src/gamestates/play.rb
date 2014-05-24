@@ -1,5 +1,6 @@
 class Play < GameState
   def initialize(window)
+    super
     @player = Player.new()
   end
 
