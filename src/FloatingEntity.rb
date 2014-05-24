@@ -1,8 +1,7 @@
 class FloatingEntity < Entity
-  def initialize(images, x, y, hp, speed, speed_damper = 1)
+  def initialize(images, x, y, hp, speed, velocity_y, speed_damper = 1)
     super images, x, y, hp
-
-    @velocity_x, @velocity_y = 0, 0
+    @velocity_y = velocity_y
     @speed = speed
     @speed_damper = speed_damper
   end
