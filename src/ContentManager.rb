@@ -1,0 +1,3 @@
+class ContentManager
+
+end
