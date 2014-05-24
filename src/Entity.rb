@@ -12,7 +12,7 @@ class Entity
   end
 
   def draw
-    @images[image_index].draw(@x, @y, ZOrder::Entity_Default)
+    @images[@image_index].draw(@x, @y, ZOrder::Entity_Default)
   end
   
   def alive?
