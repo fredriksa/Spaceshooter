@@ -1,5 +1,5 @@
 module RectangularCollision
-  def rectanglular_collision?(object1, object2)
+  def rectangular_collision?(object1, object2)
     object1_half_width = object1.width / 2
     object1_half_height = object1.height / 2
     object1_left = object1.x - object1_half_width
