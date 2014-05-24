@@ -7,7 +7,7 @@ class Play < GameState
     @drawables << @player
     @updateables << @player
 
-    @drawables << @backgrounds
+    @drawables << @background
     @updateables << @background
   end
 
