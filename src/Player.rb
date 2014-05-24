@@ -1,3 +1,3 @@
-class Player < Entity
+class Player < FloatingEntity
 
 end
