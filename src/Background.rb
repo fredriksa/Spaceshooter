@@ -1,4 +1,4 @@
-class Background
+class Background < FloatingEntity
   def initialize(solid, cover, double_cover = false)
     @solid = solid
     @cover = cover
