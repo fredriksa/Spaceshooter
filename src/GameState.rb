@@ -5,4 +5,7 @@ class GameState
   def draw
   end
 
+  def update
+  end
+
 end
