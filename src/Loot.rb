@@ -1,12 +1,17 @@
 class Loot < FloatingEntity
-  attr_accessor :type
+  attr_accessor :type, :width, :height
   def initialize(type, image, x, y, hp, velocity_y, speed)
     super image, x, y, hp, speed
     @type = type
     @velocity_y = velocity_y
-
-    @health = 50 if @type == "Health"
-    @ammo = 25 if @type == "Ammo"
+    
+    if @type == "health"
+      @width, @height = 10, 10
+      @health = 50
+    elsif @type == "Ammo"
+      @width, @height = 16, 16
+      @ammo = 25
+    end
   end
 
   def get_health
