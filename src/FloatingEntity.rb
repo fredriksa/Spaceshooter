@@ -6,13 +6,13 @@ class FloatingEntity < Entity
   def move_x
     @x += @velocity_x
     @x %= GameWindow::WIDTH
-    @velocity_x *= 0.95
+    @velocity_x *= @speed_damper
   end
 
   def move_y
     @y += @velocity_y
     @y %= GameWindow::HEIGHT
-    @velocity_y *= 0.95
+    @velocity_y *= @speed_damper
   end
 
   def accelerate_left
