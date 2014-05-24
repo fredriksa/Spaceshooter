@@ -11,9 +11,12 @@ class ResourceManager
 
   def get(*keys)
     @resources[key] if keys.size == 1
-
+    
+    acquired_resources = []
     keys.each do |key|
-      @resources[key]
+      acquired_resources << @resources[key]
     end
+
+    return acquired_resources
   end
 end
