@@ -19,7 +19,8 @@ class GameState
   end
 
   def on_load
-    raise IOError, 'file does not exist' if !File.file?("./src/gamestates/" + self.class.to_s + "_resources.txt")
+    filepath = "./src/gamestates/" + self.class.to_s + "_resources.txt"
+    raise IOError, 'file does not exist #{filepath}' if !File.file?(filepath)
   end
 
   def on_exit
