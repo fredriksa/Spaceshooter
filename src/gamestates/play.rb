@@ -28,7 +28,7 @@ class Play < GameState
     
     @cm.update(@objects)
     @cm.get_surrounding_objects(@player).each do |object|
-      puts object.class
+      next if object.class == Background
       if rectangular_collision?(@player, object)
         @player.on_collide
         object.on_collide
