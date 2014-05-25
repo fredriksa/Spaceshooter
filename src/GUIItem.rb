@@ -6,4 +6,8 @@ class GUIItem
   def draw
 
   end
+
+  def update
+
+  end
 end
