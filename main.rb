@@ -20,6 +20,7 @@ require_relative 'src/Background.rb'
 require_relative 'src/gamestates/play.rb'
 
 module ZOrder
+  GUI_Item = 1505
   GUI_Body = 1500
   Entity_Default = 1000
   Background_Cover = 55
