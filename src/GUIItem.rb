@@ -12,4 +12,8 @@ class GUIItem
   def update
   
   end
+
+  def on_hover
+
+  end
 end
