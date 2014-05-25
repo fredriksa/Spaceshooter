@@ -19,6 +19,16 @@ class GameState
   end
 
   def on_load
+    
+  end
+
+  def on_exit
+  end
+
+  def handle_input(key, type)
+  end
+
+  def load_resources
     filepath = "./src/gamestates/" + self.class.to_s + "_resources.txt"
     raise IOError, 'file does not exist #{filepath}' if !File.file?(filepath)
 
@@ -32,14 +42,5 @@ class GameState
           @rm.load_image(content[1], content[2])
       end
     end
-  end
-
-  def on_exit
-  end
-
-  def handle_input(key, type)
-  end
-
-  def load_resources
   end
 end
