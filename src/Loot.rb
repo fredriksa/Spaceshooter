@@ -6,10 +6,8 @@ class Loot < FloatingEntity
     @velocity_y = velocity_y
     
     if @type == "health"
-      @width, @height = 10, 10
       @health = 50
     elsif @type == "Ammo"
-      @width, @height = 16, 16
       @ammo = 25
     end
   end
