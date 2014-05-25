@@ -24,9 +24,13 @@ class GameState
 
     data = File.readlines(filepath)
     data.delete_at(0)
-
+    
     data.each do |content|
-
+      content = content.strip.split(" ")
+      case content[0]
+        when "image"
+          @rm.load_image(content[1], content[2])
+      end
     end
   end
 
