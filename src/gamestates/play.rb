@@ -49,6 +49,7 @@ class Play < GameState
   end
 
   def on_load
+    super
     @rm.load_image("player", "./assets/player.png")
     @rm.load_image("player_left", "./assets/player_left.png")
     @rm.load_image("player_right", "./assets/player_right.png")
