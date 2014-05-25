@@ -8,7 +8,7 @@ class Play < GameState
     @background = Background.new(@rm.get("background_solid"), @rm.get("background_stars"), @speed, true)
     @objects << @player
     @objects << @background
-    @loot_spawn_timer, @loot_spawn_counter = 0.5*60, 0
+    @loot_spawn_timer, @loot_spawn_counter = 1*60, 0
   end
 
   def draw
