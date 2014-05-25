@@ -1,0 +1,3 @@
+class GUIIcon
+  
+end
