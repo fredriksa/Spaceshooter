@@ -19,6 +19,7 @@ class GameState
   end
 
   def on_load
+    raise IOerror, 'file does not exist' if !File.file?(self.class.to_s + "_resources.txt")
   end
 
   def on_exit
