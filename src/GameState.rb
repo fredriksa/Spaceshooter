@@ -39,4 +39,7 @@ class GameState
 
   def handle_input(key, type)
   end
+
+  def load_resources
+  end
 end
