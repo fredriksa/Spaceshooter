@@ -19,7 +19,7 @@ class GameState
   end
 
   def on_load
-    
+    load_resources
   end
 
   def on_exit
