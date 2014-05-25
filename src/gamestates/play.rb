@@ -48,20 +48,6 @@ class Play < GameState
     end
   end
 
-  def on_load
-    super
-    @rm.load_image("player", "./assets/player.png")
-    @rm.load_image("player_left", "./assets/player_left.png")
-    @rm.load_image("player_right", "./assets/player_right.png")
-    @rm.load_image("player_projectile", "./assets/player_projectile.png")
-
-    @rm.load_image("background_solid", "./assets/background_solid.png")
-    @rm.load_image("background_stars", "./assets/background_stars.png")
-
-    @rm.load_image("health", "./assets/health.png")
-    @rm.load_image("ammo", "./assets/ammo.png")
-  end
-
   def handle_input(key, type)
     if type == "down"
       case key
