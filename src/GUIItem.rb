@@ -6,7 +6,7 @@ class GUIItem
   end
 
   def draw
-  
+    @image.draw(@x, @y, ZOrder::GUI_Item)
   end
 
   def update
