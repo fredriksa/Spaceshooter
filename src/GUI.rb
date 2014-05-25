@@ -8,4 +8,8 @@ class GUI
 
   def update
   end
+
+  def add_item
+
+  end
 end
