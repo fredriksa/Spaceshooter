@@ -7,7 +7,12 @@ class Entity
     @x, @y = x, y
     @health = hp
     @alive = true
-    @width, @height = 0, 0
+    
+    if images.is_a? Array
+      @width, @height = images[0].height, images[0].width
+    else
+      @width, @height = images.height, images.width
+    end
   end
 
   def draw
