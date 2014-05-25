@@ -1,5 +1,5 @@
 class GUIItem
-  def initialize
-
+  def initialize(image, x, y)
+  
   end
 end
