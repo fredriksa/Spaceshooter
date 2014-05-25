@@ -1,1 +1,9 @@
 Type -- Key -- Path
+image   player   ./assets/player.png          
+image   player_left   ./assets/player_left.png
+image   player_right   ./assets/player_right.png
+image   player_projectile   ./assets/player_projectile.png
+image   background_solid   ./assets/background_solid.png
+image   background_stars   ./assets/background_stars.png
+image   health   ./assets/health.png
+image   ammo   ./assets/ammo.png
