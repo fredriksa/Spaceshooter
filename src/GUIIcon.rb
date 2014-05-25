@@ -1,3 +1,3 @@
-class GUIIcon
-  
+class GUIIcon < GUIItem
+
 end
