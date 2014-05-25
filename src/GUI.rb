@@ -6,7 +6,9 @@ class GUI
 
   def draw
     if @visible and @items.size > 0
-
+      @items.each do |item|
+        item.draw
+      end
     end
   end
 
