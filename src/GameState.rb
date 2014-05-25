@@ -21,6 +21,8 @@ class GameState
   def on_load
     filepath = "./src/gamestates/" + self.class.to_s + "_resources.txt"
     raise IOError, 'file does not exist #{filepath}' if !File.file?(filepath)
+
+    data = File.readlines(filepath)
   end
 
   def on_exit
