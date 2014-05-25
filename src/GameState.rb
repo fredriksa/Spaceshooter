@@ -24,6 +24,10 @@ class GameState
 
     data = File.readlines(filepath)
     data.delete_at(0)
+
+    data.each do |content|
+
+    end
   end
 
   def on_exit
