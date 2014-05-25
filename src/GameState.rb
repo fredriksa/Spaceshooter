@@ -23,6 +23,7 @@ class GameState
     raise IOError, 'file does not exist #{filepath}' if !File.file?(filepath)
 
     data = File.readlines(filepath)
+    data.delete_at(0)
   end
 
   def on_exit
