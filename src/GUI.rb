@@ -5,6 +5,9 @@ class GUI
   end
 
   def draw
+    if @visible and @items.size > 0
+
+    end
   end
 
   def update
