@@ -5,4 +5,7 @@ class GUI
 
   def draw
   end
+
+  def update
+  end
 end
