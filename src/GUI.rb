@@ -1,6 +1,7 @@
 class GUI
   def initialize(visible = true)
     @visible = visible
+    @items = []
   end
 
   def draw
