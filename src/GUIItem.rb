@@ -1,5 +1,5 @@
 class GUIItem
-  def initialize(image, x, y, width, height)
+  def initialize(image, x, y)
     @image = image
     @x, @y = x, y
     @width, @height = image.height, image.width
@@ -10,6 +10,6 @@ class GUIItem
   end
 
   def update
-
+  
   end
 end
