@@ -1,6 +1,6 @@
 class GUI
-  def initialize
-  
+  def initialize(visible = true)
+    @visible = visible
   end
 
   def draw
@@ -10,6 +10,6 @@ class GUI
   end
 
   def add_item(image, x, y)
-  
+
   end
 end
