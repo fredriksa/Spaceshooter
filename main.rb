@@ -25,6 +25,7 @@ module ZOrder
   GUI_Item = 1505
   GUI_Body = 1500
   Entity_Default = 1000
+  Entity_Secondary = 990
   Background_Cover = 55
   Background_Solid = 50
 end
