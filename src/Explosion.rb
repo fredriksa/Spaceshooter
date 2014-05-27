@@ -1,3 +1,3 @@
 class Explosion < Entity
-
+  
 end
