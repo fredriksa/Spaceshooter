@@ -1,4 +1,6 @@
 class FloatingEntity < Entity
+  attr_accessor :velocity_x, :velocity_y 
+  
   def initialize(images, x, y, speed, speed_damper = 1)
     super images, x, y
 
