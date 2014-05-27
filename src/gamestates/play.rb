@@ -4,9 +4,9 @@ class Play < GameState
   def initialize(window)
     super
     @speed = 1
-    @player = Player.new(@rm.get("player", "player_left", "player_right", "player_flame"), @rm.get("player_projectile"), GameWindow::WIDTH/2, GameWindow::HEIGHT - 80, 100, 1.5, 0.95)
-    @background = Background.new(@rm.get("background_solid"), @rm.get("background_stars"), @speed, true)
-    @GUI.set_font(@rm.get("hyperspace"))
+    @player = Player.new(@rm["player", "player_left", "player_right", "player_flame"], @rm["player_projectile"], GameWindow::WIDTH/2, GameWindow::HEIGHT - 80, 100, 1.5, 0.95)
+    @background = Background.new(@rm["background_solid"], @rm["background_stars"], @speed, true)
+    @GUI.set_font(@rm["hyperspace"])
     @GUI.add_text("player_health","", 5, GameWindow::HEIGHT-32)
     @GUI.add_text("player_ammo", "", GameWindow::WIDTH-40, GameWindow::HEIGHT-32)
     @objects << @player
@@ -38,7 +38,7 @@ class Play < GameState
       if rectangular_collision?(@player, object)
         @player.on_collide
         object.on_collide
-        @objects << Explosion.new(@rm.get("explosion"), object.x, object.y)
+        @objects << Explosion.new(@rm["explosion"], object.x, object.y)
 
 
         case object.type
@@ -77,7 +77,7 @@ class Play < GameState
 
   def generate_loot
     random_number = rand(0..1)
-    return Loot.new("Health", @rm.get("health"), rand(30..GameWindow::WIDTH-30), -50, 2.5, 7.5) if random_number == 0
-    return Loot.new("Ammo", @rm.get("ammo"), rand(30..GameWindow::WIDTH-30), -50, 2.5, 7.5) if random_number == 1
+    return Loot.new("Health", @rm["health"], rand(30..GameWindow::WIDTH-30), -50, 2.5, 7.5) if random_number == 0
+    return Loot.new("Ammo", @rm["ammo"], rand(30..GameWindow::WIDTH-30), -50, 2.5, 7.5) if random_number == 1
   end
 end
