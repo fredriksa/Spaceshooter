@@ -5,5 +5,6 @@ module AIFighter
     end
 
     def target(target)
+    end
   end
 end
