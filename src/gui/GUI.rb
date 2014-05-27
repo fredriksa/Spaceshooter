@@ -16,6 +16,5 @@ class GUI
   end
 
   def add_item(image, x, y)
-    @items << GUIItem.new(image, x, y)
   end
 end
