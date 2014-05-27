@@ -1,11 +1,12 @@
 class Entity
-  attr_accessor :image_index, :x, :y, :width, :height
+  attr_accessor :image_index, :x, :y, :width, :height, :solid
 
   def initialize(images, x, y)
     @images = images
     @image_index = 0
     @x, @y = x, y
     @alive = true
+    @solid = false
     
     if images.is_a? Array
       @width, @height = images[0].height, images[0].width
