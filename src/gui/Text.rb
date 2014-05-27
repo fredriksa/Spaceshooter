@@ -1,6 +1,6 @@
 module GUI
   class Text
-    def initialize
+    def initialize(text, font, x, y)
 
     end
     def draw
