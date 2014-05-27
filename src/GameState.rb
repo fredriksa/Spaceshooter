@@ -45,6 +45,8 @@ class GameState
           @rm.load_image(content[1], content[2])
         when "font"
           @rm.load_font(content[1], content[2], content[3].to_i)
+        when "spritesheet"
+          @rm.load_spritesheet(content[1], content[2], content[3].to_i, content[4].to_i)
       end
     end
   end
