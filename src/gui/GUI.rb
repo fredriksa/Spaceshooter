@@ -28,7 +28,7 @@ module GUI
       @items << Text.new(text, @font, x, y)
     end
 
-    def add_icon(image, x, y)
+    def add_icon(key, image, x, y)
       @items << Icon.new(image, x, y)
     end
   end
