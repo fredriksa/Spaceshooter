@@ -8,5 +8,9 @@ module GUI
     def draw
       @font.draw(@text, @x, @y, ZOrder::GUI_Text)
     end
+
+    def width
+
+    end
   end
 end
