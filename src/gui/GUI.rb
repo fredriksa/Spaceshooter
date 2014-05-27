@@ -20,6 +20,11 @@ module GUI
     end
 
     def add_text(text, font, x, y)
+      @items << GUI::Text(text, font, x, y)
+    end
+
+    def add_icon(image, x, y)
+
     end
   end
 end
