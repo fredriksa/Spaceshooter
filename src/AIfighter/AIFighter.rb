@@ -1,6 +1,6 @@
 module AIFighter
   class AIFighter < SpaceshipFighter
-    def update
+    def update(objects)
 
     end
 
