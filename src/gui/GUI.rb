@@ -25,7 +25,7 @@ module GUI
 
     def add_text(text, x, y)
       raise ArgumentError, 'Font has not been set!' if @font == nil
-      @items << Text.new(text, font, x, y)
+      @items << Text.new(text, @font, x, y)
     end
 
     def add_icon(image, x, y)
