@@ -1,5 +1,5 @@
 module AIFighter
-  class AIFighter
+  class AIFighter < SpaceshipFighter
 
   end
 end
