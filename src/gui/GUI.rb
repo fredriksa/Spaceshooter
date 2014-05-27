@@ -14,6 +14,9 @@ module GUI
     end
 
     def update
+      @items.each do |item|
+        item.update
+      end
     end
 
     def add_item(image, x, y)
