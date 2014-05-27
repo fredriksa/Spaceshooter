@@ -14,6 +14,9 @@ class ResourceManager
     @resources[key] = Gosu::Font.new(@window, path, height)
   end
 
+  def load_spritesheet
+  end
+
   def get(*keys)
     return @resources[keys[0]] if keys.size == 1
     
