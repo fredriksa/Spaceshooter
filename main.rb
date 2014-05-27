@@ -12,9 +12,7 @@ require_relative 'src/SpaceshipFighter.rb'
 require_relative 'src/Projectile.rb'
 require_relative 'src/Loot.rb'
 
-require_relative 'src/GUI.rb'
-require_relative 'src/GUIItem.rb'
-require_relative 'src/GUIIcon.rb'
+require_relative 'src/GUI/GUI.rb'
 
 require_relative 'src/Player.rb'
 require_relative 'src/Background.rb'
