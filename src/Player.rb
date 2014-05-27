@@ -35,4 +35,10 @@ class Player < SpaceshipFighter
     accelerate_left if @KbLeft
     accelerate_right if @KbRight
   end
+
+  def fire
+    return if @ammo <= 0
+    @ammo -= 1
+    super
+  end
 end
