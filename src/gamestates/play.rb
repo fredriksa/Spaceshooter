@@ -6,6 +6,7 @@ class Play < GameState
     @speed = 1
     @player = Player.new(@rm.get("player", "player_left", "player_right", "player_flame"), @rm.get("player_projectile"), GameWindow::WIDTH/2, GameWindow::HEIGHT - 50, 100, 1.5, 0.95)
     @background = Background.new(@rm.get("background_solid"), @rm.get("background_stars"), @speed, true)
+    @GUI = GUI::GUI.new
     @objects << @player
     @objects << @background
     @loot_spawn_timer, @loot_spawn_counter = 1*60, 0
