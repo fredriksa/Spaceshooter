@@ -1,5 +1,5 @@
 module GUI
-  class Button
+  class Button < Entity
     def draw
     end
   end

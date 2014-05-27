@@ -1,5 +1,5 @@
 module GUI
-  class Text
+  class Text < Entity
     def initialize
 
     end
