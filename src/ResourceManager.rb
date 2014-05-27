@@ -15,6 +15,8 @@ class ResourceManager
   end
 
   def load_spritesheet(key, path, width, height)
+    raise IOError, 'path must point to a existing file!' if !File.file?(path)
+    @resources[key] = Gosu::Image::load_tiles(@window, path, width, height, false)
   end
 
   def get(*keys)
