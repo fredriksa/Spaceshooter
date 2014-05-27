@@ -8,6 +8,7 @@ class SpaceshipFighter < FloatingEntity
     @projectiles = []
     @damage = 25
     @ammo = 0
+    @solid = true
   end
 
   def draw
