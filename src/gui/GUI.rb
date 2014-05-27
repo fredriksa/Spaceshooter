@@ -19,7 +19,7 @@ module GUI
       end
     end
 
-    def add_item(image, x, y)
+    def add_text(text, font, x, y)
     end
   end
 end
