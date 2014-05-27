@@ -1,11 +1,10 @@
 class Entity
-  attr_accessor :velocity_x, :velocity_y, :image_index, :x, :y, :width, :height, :health
+  attr_accessor :velocity_x, :velocity_y, :image_index, :x, :y, :width, :height
 
-  def initialize(images, x, y, hp)
+  def initialize(images, x, y)
     @images = images
     @image_index = 0
     @x, @y = x, y
-    @health = hp
     @alive = true
     
     if images.is_a? Array
