@@ -11,12 +11,12 @@ class Player < SpaceshipFighter
   def draw
     super
     if @velocity_x > 2
-      @flame.draw(@x+4.5, @y+17, ZOrder::Entity_Secondary)
+      @flame.draw(@x+5, @y+20, ZOrder::Entity_Secondary)
     elsif @velocity_x < -2
-      @flame.draw(@x+17.5, @y+17, ZOrder::Entity_Secondary)
+      @flame.draw(@x+17.5, @y+20, ZOrder::Entity_Secondary)
     else
-      @flame.draw(@x+4.5, @y+17, ZOrder::Entity_Secondary)
-      @flame.draw(@x+17.5, @y+17, ZOrder::Entity_Secondary) 
+      @flame.draw(@x+4.5, @y+20, ZOrder::Entity_Secondary)
+      @flame.draw(@x+17.5, @y+20, ZOrder::Entity_Secondary) 
     end
   end
 
