@@ -70,7 +70,7 @@ class Play < GameState
 
   def generate_loot
     random_number = rand(0..1)
-    return Loot.new("Health", @rm.get("health"), rand(30..GameWindow::WIDTH-30), -50, 20, 2.5, 7.5) if random_number == 0
-    return Loot.new("Ammo", @rm.get("ammo"), rand(30..GameWindow::WIDTH-30), -50, 20, 2.5, 7.5) if random_number == 1
+    return Loot.new("Health", @rm.get("health"), rand(30..GameWindow::WIDTH-30), -50, 2.5, 7.5) if random_number == 0
+    return Loot.new("Ammo", @rm.get("ammo"), rand(30..GameWindow::WIDTH-30), -50, 2.5, 7.5) if random_number == 1
   end
 end
