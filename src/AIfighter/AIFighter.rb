@@ -3,5 +3,7 @@ module AIFighter
     def update
 
     end
+
+    def target(target)
   end
 end
