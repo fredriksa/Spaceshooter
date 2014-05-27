@@ -8,3 +8,4 @@ image   background_stars   ./assets/background_stars.png
 image   health   ./assets/health.png
 image   ammo   ./assets/ammo.png
 image   player_flame   ./assets/player_flame.png
+font    hyperspace   ./assets/Hyperspace.ttf
