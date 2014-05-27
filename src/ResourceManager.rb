@@ -18,8 +18,8 @@ class ResourceManager
     raise IOError, 'path must point to a existing file!' if !File.file?(path)
     @resources[key] = Gosu::Image::load_tiles(@window, path, width, height, true)
   end
-
-  def get(*keys)
+  
+  def [](*keys)
     return @resources[keys[0]] if keys.size == 1
     
     acquired_resources = []
