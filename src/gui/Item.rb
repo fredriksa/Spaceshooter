@@ -1,5 +1,5 @@
 module GUI
-  class Item
+  class Item < Entity
 
   end
 end
