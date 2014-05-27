@@ -31,8 +31,8 @@ module GUI
     def add_icon(key, image, x, y)
       @items[key] = Icon.new(image, x, y)
     end
-
-    def get(key)
+    
+    def [](key)
       @items[key]
     end
   end
