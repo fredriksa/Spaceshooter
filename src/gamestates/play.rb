@@ -34,10 +34,11 @@ class Play < GameState
     
     @cm.update(@objects)
     @cm.get_surrounding_objects(@player).each do |object|
-      next if object.class == Background
+      next if !object.solid
       if rectangular_collision?(@player, object)
         @player.on_collide
         object.on_collide
+        @objects << Explosion.new(@rm.get("explosion"), object.x, object.y)
 
 
         case object.type
