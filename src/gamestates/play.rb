@@ -33,7 +33,7 @@ class Play < GameState
     end
     
     @cm.update(@objects)
-    @cm.get_surrounding_objects(@player).each do |object|
+    @cm.surrounding_objects(@player).each do |object|
       next if !object.solid
       if rectangular_collision?(@player, object)
         @player.on_collide

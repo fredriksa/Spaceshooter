@@ -12,7 +12,7 @@ class ContentManager
     end  
   end
 
-  def get_surrounding_objects(object)
+  def surrounding_objects(object)
     surrounding_objects = []
     ((object.x/@grid_width-1).round..(object.x/@grid_width+1).round).each do |x|
       ((object.y/@grid_height-1).round..(object.y/@grid_height+1).round).each do |y|
