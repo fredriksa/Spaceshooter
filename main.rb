@@ -13,7 +13,6 @@ require_relative 'src/Projectile.rb'
 require_relative 'src/Loot.rb'
 
 require_relative 'src/GUI/GUI.rb'
-require_relative 'src/GUI/Item.rb'
 require_relative 'src/GUI/Text.rb'
 require_relative 'src/GUI/Icon.rb'
 require_relative 'src/GUI/Button.rb'
