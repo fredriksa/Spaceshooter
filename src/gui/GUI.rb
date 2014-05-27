@@ -7,15 +7,15 @@ module GUI
 
     def draw
       if @visible and @items.size > 0
-        @items.each do |item|
-          item.draw
+        @items.each do |key, value|
+          value.draw
         end
       end
     end
 
     def update
-      @items.each do |item|
-        item.update
+      @items.each do |key, value|
+        value.update
       end
     end
 
