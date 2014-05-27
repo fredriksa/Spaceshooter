@@ -10,7 +10,7 @@ module GUI
     end
 
     def width
-
+      @font.text_width(@text)
     end
   end
 end
