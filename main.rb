@@ -18,6 +18,8 @@ require_relative 'src/GUI/Text.rb'
 require_relative 'src/GUI/Icon.rb'
 require_relative 'src/GUI/Button.rb'
 
+require_relative 'src/AIfighter/AIFighter.rb'
+
 require_relative 'src/Player.rb'
 require_relative 'src/Background.rb'
 
