@@ -1,5 +1,5 @@
 class Player < SpaceshipFighter
-  attr_accessor :KbLeft, :KbRight, :ammo, :health
+  attr_accessor :KbLeft, :KbRight, :ammo, :max_ammo, :health, :max_health
 
   def initialize(images, projectile_image, x, y, hp, speed, speed_damper = 1)
     super images, projectile_image, x, y, speed, "Player", speed_damper
@@ -7,6 +7,8 @@ class Player < SpaceshipFighter
     @KbLeft = false
     @KbRight = false
     @health = hp
+    @max_health = health
+    @max_ammo = 50
   end
 
   def draw
