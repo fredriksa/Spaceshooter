@@ -32,7 +32,7 @@ module GUI
       @items[key] = Icon.new(image, x, y)
     end
 
-    def get
+    def get(key)
     end
   end
 end
