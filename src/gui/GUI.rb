@@ -33,6 +33,7 @@ module GUI
     end
 
     def get(key)
+      @items[key]
     end
   end
 end
