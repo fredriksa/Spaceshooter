@@ -20,8 +20,8 @@ class Play < GameState
 
   def update
     super
-    @GUI.get("player_health").text = @player.health
-    @GUI.get("player_ammo").text = @player.ammo
+    @GUI["player_health"].text = @player.health
+    @GUI["player_ammo"].text = @player.ammo
 
     @objects += @player.projectiles
     
