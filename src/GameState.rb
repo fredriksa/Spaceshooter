@@ -40,6 +40,8 @@ class GameState
       case content[0]
         when "image"
           @rm.load_image(content[1], content[2])
+        when "font"
+          @rm.load_font(content[1], content[2], content[3].to_i)
       end
     end
   end
