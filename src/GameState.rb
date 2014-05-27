@@ -3,6 +3,7 @@ class GameState
     @objects = []
     @rm = ResourceManager.new(window)
     @cm = ContentManager.new
+    @GUI = GUI::GUI.new
     on_load
   end
 
@@ -10,12 +11,14 @@ class GameState
     @objects.each do |object|
       object.draw
     end
+    @GUI.draw
   end
 
   def update
     @objects.each do |object|
       object.update
     end
+    @GUI.update
   end
 
   def on_load
