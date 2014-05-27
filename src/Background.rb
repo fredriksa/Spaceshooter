@@ -1,7 +1,7 @@
 class Background < FloatingEntity
   attr_accessor :x, :y
-  def initialize(solid, cover, speed, double_cover = false)
-    @solid = solid
+  def initialize(bg, cover, speed, double_cover = false)
+    @bg = bg
     @cover = cover
     @double_cover = double_cover
     
@@ -14,7 +14,7 @@ class Background < FloatingEntity
   end
 
   def draw
-    @solid.draw(0, 0, ZOrder::Background_Solid)
+    @bg.draw(0, 0, ZOrder::Background_Solid)
     @cover.draw(0, @y, ZOrder::Background_Cover)
     @cover.draw(200, @y, ZOrder::Background_Cover)if @double_cover
 
