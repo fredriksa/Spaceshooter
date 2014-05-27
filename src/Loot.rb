@@ -4,6 +4,7 @@ class Loot < FloatingEntity
     super image, x, y, speed
     @type = type
     @velocity_y = velocity_y
+    @solid = true
     
     if @type == "Health"
       @loot_health = 10
