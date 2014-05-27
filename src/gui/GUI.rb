@@ -24,7 +24,7 @@ module GUI
     end
 
     def add_icon(image, x, y)
-
+      @items << GUI::Icon(image, x, y)
     end
   end
 end
