@@ -2,7 +2,7 @@ module GUI
   class GUI
     def initialize(visible = true)
       @visible = visible
-      @items = []
+      @items = {}
     end
 
     def draw
