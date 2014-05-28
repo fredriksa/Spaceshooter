@@ -17,8 +17,8 @@ module AIFighter
     end
 
     def clean_from_class(objects, class_type, opposite = false)
-      objects.drop_while {|object| object.class == class_type} if opposite == false
-      objects.drop_while {|object| object.class != class_type} if opposite == true
+      return objects.drop_while {|object| object.class == class_type} if opposite == false
+      return objects.drop_while {|object| object.class != class_type} if opposite == true
     end
 
     def closest_object
