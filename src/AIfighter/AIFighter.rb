@@ -1,7 +1,7 @@
 module AIFighter
   class AIFighter < SpaceshipFighter
     def update(objects)
-      objects = objects.dup
+      @objects = objects.dup
       objects.drop_while {|object| object.class != Projectile && object.team != "Player"}
       closest_projectile = objects.min {|a, b| (a.x - player.x).abs <=> (b.x - player.x).abs}
       if (closest_projectile.x - player.x).abs < self.width
@@ -18,6 +18,7 @@ module AIFighter
     end
 
     def closest_projectile
+
     end
   end
 end
