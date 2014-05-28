@@ -2,7 +2,6 @@ module AIFighter
   class AIFighter < SpaceshipFighter
     def update(objects)
       @objects = objects.dup
-      objects.drop_while {|object| object.class != Projectile && object.team != "Player"}
       if (closest_projectile.x - player.x).abs < self.width
         accelerate_left if closest_projectile.x > self.x
         accelerate_right if closest_projectile.x < self.x
@@ -17,7 +16,7 @@ module AIFighter
     end
 
     def clean_from_class(objects, class_name)
-
+      objects.drop_while {|object| object.class != Projectile && object.team != "Player"}
     end
 
     def closest_object
