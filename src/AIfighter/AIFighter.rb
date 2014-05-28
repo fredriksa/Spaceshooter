@@ -16,5 +16,8 @@ module AIFighter
     def target(target)
       @target = target
     end
+
+    def closest_projectile
+    end
   end
 end
