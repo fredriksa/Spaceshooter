@@ -16,7 +16,7 @@ module AIFighter
       @target = target
     end
 
-    def closest_projectile
+    def closest_object
       @objects.min {|a, b| (a.x - player.x).abs <=> (b.x - player.x).abs}
     end
   end
