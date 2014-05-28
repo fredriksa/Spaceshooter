@@ -16,6 +16,10 @@ module AIFighter
       @target = target
     end
 
+    def clean_from_class(objects, class_name)
+
+    end
+
     def closest_object
       @objects.min {|a, b| (a.x - player.x).abs <=> (b.x - player.x).abs}
     end
