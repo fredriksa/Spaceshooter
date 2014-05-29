@@ -17,10 +17,14 @@ module AIFighter
     end
 
     def dodge_projectile
-      projectiles = clean_from_class(@objects, Projectile, true)
-      threathening_projectiles = threathening(projectiles)
-      closest_projectile = closest_entity(threatening_projectiles)
-      dodge(closest_projectile) if closest_projectile != nil     
+      if @timers["dodge_projectiles"] > @static_timers["dodge_projectiles"]
+        projectiles = clean_from_class(@objects, Projectile, true)
+        threathening_projectiles = threathening(projectiles)
+        closest_projectile = closest_entity(threatening_projectiles)
+        dodge(closest_projectile) if closest_projectile != nil
+      else
+        @timers["dodge_projectiles"] += 1
+      end     
     end
 
     def dodge(entity)
