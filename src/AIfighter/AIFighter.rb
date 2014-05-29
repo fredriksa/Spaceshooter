@@ -4,7 +4,7 @@ module AIFighter
     def initialize(images, projectile_image, x, y, speed, type, dodge_projectiles = true, speed_damper = 0.95)
       super images, projectile_image, x, y, speed, type, speed_damper
       @property = {"dodge_projectiles" => dodge_projectiles}
-      @static_timer = {"dodge_projectiles" => 5}
+      @static_timer = {"dodge_projectiles" => 5, "shoot" => 30}
       @timer = @static_timer.dup
     end
 
