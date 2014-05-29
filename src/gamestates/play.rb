@@ -10,6 +10,7 @@ class Play < GameState
     @GUI.set_font(@rm["hyperspace"])
     @GUI.add_text("player_health","", 5, GameWindow::HEIGHT-32)
     @GUI.add_text("player_ammo", "", GameWindow::WIDTH-40, GameWindow::HEIGHT-32)
+    @player.ammo = 50
     @objects << @player
     @objects << @background
     @loot_spawn_timer, @loot_spawn_counter = 1*60, 0
