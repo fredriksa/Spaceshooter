@@ -1,5 +1,6 @@
 module AIFighter
   class AIFighter < SpaceshipFighter
+    include RectangularCollision
     def update(objects)
       @objects = objects.dup
       @objects = clean_from_class(@objects, Projectile, true)
