@@ -56,7 +56,7 @@ module AIFighter
     end
 
     def closest_entity(objects)
-      objects.min {|a, b| (a.x - self.x).abs <=> (b.x - self.x).abs}
+      objects.min {|a, b| (a.x - self.x).abs + (a.y - self.y).abs <=> (b.x - self.x).abs + (b.y - self.y)}
     end
   end
 end
