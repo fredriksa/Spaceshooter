@@ -5,6 +5,7 @@ module AIFighter
       super images, projectile_image, x, y, speed, type, speed_damper
       @property = {"dodge_projectiles" => dodge_projectiles}
       @timers = {"dodge_projectiles" => 30}
+      @timers_counting = @timers.dup
     end
 
     def update(objects)
