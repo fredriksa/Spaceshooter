@@ -1,5 +1,5 @@
 module AIFighter
-  class Green
+  class Green < AIFighter
 
   end
 end
