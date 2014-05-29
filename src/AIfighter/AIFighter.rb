@@ -7,19 +7,6 @@ module AIFighter
     end
 
     def update(objects)
-      @objects = objects.dup
-      dodge_projectile
-      # Check if must dodge closest missile
-      # Line -nearly- up with target
-      # Fire at target
-
-      # If AI got property dodge_projectiles => true
-      # Dodge projectiles every 0.6 seconds
-
-      # Remove non-projectiles
-      # Remove non-threathening projectiles
-      # Get closest threathening projectile
-      # Dodge it
       dodge_projectile if @property["dodge_projectiles"]
     end
     
