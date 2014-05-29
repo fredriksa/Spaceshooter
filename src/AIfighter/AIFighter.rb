@@ -1,6 +1,10 @@
 module AIFighter
   class AIFighter < SpaceshipFighter
     include RectangularCollision
+    def initialize
+
+    end
+    
     def update(objects)
       @objects = objects.dup
       dodge_projectile
