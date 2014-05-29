@@ -14,7 +14,7 @@ module AIFighter
     end
 
     def dodge_projectile
-      
+      clean_from_class(@objects, Projectile, true)      
     end
 
     def clean_from_class(objects, class_type, opposite = false)
