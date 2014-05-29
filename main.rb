@@ -8,15 +8,15 @@ require_relative 'src/RectangularCollisionModule.rb'
 
 require_relative 'src/Entity.rb'
 require_relative 'src/FloatingEntity.rb'
-require_relative 'src/SpaceshipFighter.rb'
+require_relative 'src/SpaceShipFighter.rb'
 require_relative 'src/Projectile.rb'
 require_relative 'src/Loot.rb'
 require_relative 'src/Explosion.rb'
 
-require_relative 'src/GUI/GUI.rb'
-require_relative 'src/GUI/Text.rb'
-require_relative 'src/GUI/Icon.rb'
-require_relative 'src/GUI/Button.rb'
+require_relative 'src/gui/GUI.rb'
+require_relative 'src/gui/Text.rb'
+require_relative 'src/gui/Icon.rb'
+require_relative 'src/gui/Button.rb'
 
 require_relative 'src/AIfighter/AIFighter.rb'
 
@@ -36,7 +36,7 @@ end
 
 class GameWindow < Gosu::Window
   WIDTH, HEIGHT, FULLSCREEN, NAME = 640, 480, false, "Spaceshooter"
-  
+
   def initialize
     super WIDTH, HEIGHT, FULLSCREEN
     self.caption = NAME
@@ -44,7 +44,7 @@ class GameWindow < Gosu::Window
     @state_manager = GameStateManager.new(self)
     @state_manager.add(Play.new(self))
   end
-  
+
   def draw
     @state_manager.draw
   end
@@ -52,7 +52,7 @@ class GameWindow < Gosu::Window
   def update
     @state_manager.update
   end
-  
+
   def button_down(id)
     @state_manager.handle_input(id, "down")
   end
