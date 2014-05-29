@@ -18,6 +18,10 @@ module AIFighter
       cloest_projectile = closest_object(@objects)     
     end
 
+    def will_collide?(object)
+
+    end
+
     def clean_from_class(objects, class_type, opposite = false)
       objects = objects.dup
       objects.drop_while {|object| object.class == class_type} if opposite == false
