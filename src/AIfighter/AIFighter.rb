@@ -20,7 +20,7 @@ module AIFighter
 
     def will_collide?(object)
       object.x = self.x
-      
+      rectangular_collision?(self, object)
     end
 
     def clean_from_class(objects, class_type, opposite = false)
