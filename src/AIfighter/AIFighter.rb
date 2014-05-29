@@ -13,9 +13,13 @@ module AIFighter
       # Line -nearly- up with target
       # Fire at target
     end
-
+    
     def target(target)
       @target = target
+    end
+
+    def dodge_projectile
+
     end
 
     def clean_from_class(objects, class_type, opposite = false)
