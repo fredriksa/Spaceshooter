@@ -1,7 +1,7 @@
 module AIFighter
   class Green < AIFighter
-    def initialize(images, projectile_image, x, y, speed, type, dodge_projectiles = true, speed_damper = 1)
-
+    def initialize(images, projectile_image, x, y, speed, type, speed_damper = 1)
+      super images, projectile_image, x, y, speed, type, true, speed_damper
     end
   end
 end
