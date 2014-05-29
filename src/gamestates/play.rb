@@ -6,6 +6,7 @@ class Play < GameState
     @speed = 1
     @player = Player.new(@rm["player", "player_left", "player_right", "player_flame"], @rm["player_projectile"], GameWindow::WIDTH/2, GameWindow::HEIGHT - 80, 100, 1.5, 0.95)
     @background = Background.new(@rm["background_solid"], @rm["background_stars"], @speed, true)
+    @green_fighter = AIFighter::Green.new(@rm["greenfighter", "greenfighter_left", "greenfighter_right"], @rm["enemy_projectile"], GameWindow::WIDTH/2, 80, 0.5, "hostile")
     @GUI.set_font(@rm["hyperspace"])
     @GUI.add_text("player_health","", 5, GameWindow::HEIGHT-32)
     @GUI.add_text("player_ammo", "", GameWindow::WIDTH-40, GameWindow::HEIGHT-32)
@@ -16,6 +17,7 @@ class Play < GameState
 
   def draw
     super
+    @green_fighter.draw
   end
 
   def update
@@ -31,6 +33,8 @@ class Play < GameState
     else
       @loot_spawn_counter += 1
     end
+
+    @green_fighter.update(@cm.surrounding_objects(@player))
     
     @cm.update(@objects)
     @cm.surrounding_objects(@player).each do |object|
