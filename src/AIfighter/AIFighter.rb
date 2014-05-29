@@ -15,10 +15,10 @@ module AIFighter
 
     def dodge_projectile
       clean_from_class(@objects, Projectile, true)
-      cloest_projectile = closest_object(@objects)     
+      closest_projectile = closest_object(@objects)     
     end
 
-    def will_collide?(object)
+    def might_collide?(object)
       object.x = self.x
       rectangular_collision?(self, object)
     end
