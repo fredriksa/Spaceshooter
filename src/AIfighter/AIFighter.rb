@@ -27,6 +27,10 @@ module AIFighter
       closest_projectile = closest_object(threatening_projectiles)     
     end
 
+    def dodge
+    
+    end
+
     def might_collide?(object)
       object = object.dup
       object.y = self.y
