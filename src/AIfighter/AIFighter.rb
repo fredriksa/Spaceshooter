@@ -3,7 +3,7 @@ module AIFighter
     include RectangularCollision
     def initialize(images, projectile_image, x, y, speed, type, dodge_projectiles = true, speed_damper = 1)
       super images, projectile_image, x, y, speed, type, speed_damper
-      @settings = {}
+      @settings = {"dodge_projectiles" => dodge_projectiles}
     end
 
     def update(objects)
