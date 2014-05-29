@@ -3,12 +3,7 @@ module AIFighter
     include RectangularCollision
     def update(objects)
       @objects = objects.dup
-      @objects = clean_from_class(@objects, Projectile, true)
-      
-      if (closest_projectile.x - player.x).abs < self.width
-        accelerate_left if closest_projectile.x > self.x
-        accelerate_right if closest_projectile.x < self.x
-      end
+      dodge_projectile
       # Check if must dodge closest missile
       # Line -nearly- up with target
       # Fire at target
