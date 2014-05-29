@@ -10,3 +10,7 @@ image   ammo   ./assets/ammo.png
 image   player_flame   ./assets/player_flame.png
 font    hyperspace   ./assets/HyperspaceBold.ttf 32
 spritesheet explosion ./assets/explosion.png 40 40
+image   greenfighter   ./assets/greenfighter.png
+image   greenfighter_left   ./assets/greenfighter_left.png
+image   greenfighter_right     ./assets/greenfighter_right.png
+image   enemy_projectile    ./assets/enemy_projectile.png
