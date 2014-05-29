@@ -1,7 +1,7 @@
 module AIFighter
   class AIFighter < SpaceshipFighter
     include RectangularCollision
-    def initialize(images, projectile_image, x, y, speed, type, dodge_projectiles, speed_damper = 1)
+    def initialize(images, projectile_image, x, y, speed, type, dodge_projectiles = true, speed_damper = 1)
     
     end
 
