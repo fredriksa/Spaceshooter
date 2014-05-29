@@ -4,8 +4,8 @@ module AIFighter
     def initialize(images, projectile_image, x, y, speed, type, dodge_projectiles = true, speed_damper = 1)
       super images, projectile_image, x, y, speed, type, speed_damper
       @property = {"dodge_projectiles" => dodge_projectiles}
-      @static_timers = {"dodge_projectiles" => 30}
-      @timers = @static_timers.dup
+      @static_timer = {"dodge_projectiles" => 30}
+      @timer = @static_timer.dup
     end
 
     def update(objects)
@@ -17,13 +17,13 @@ module AIFighter
     end
 
     def dodge_projectile
-      if @timers["dodge_projectiles"] > @static_timers["dodge_projectiles"]
+      if @timer["dodge_projectiles"] > @static_timer["dodge_projectiles"]
         projectiles = clean_from_class(@objects, Projectile, true)
         threathening_projectiles = threathening(projectiles)
         closest_projectile = closest_entity(threatening_projectiles)
         dodge(closest_projectile) if closest_projectile != nil
       else
-        @timers["dodge_projectiles"] += 1
+        @timer["dodge_projectiles"] += 1
       end     
     end
 
