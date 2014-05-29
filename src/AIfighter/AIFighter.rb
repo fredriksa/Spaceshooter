@@ -19,7 +19,8 @@ module AIFighter
     end
 
     def will_collide?(object)
-
+      object.x = self.x
+      
     end
 
     def clean_from_class(objects, class_type, opposite = false)
