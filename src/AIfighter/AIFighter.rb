@@ -3,6 +3,7 @@ module AIFighter
     def update(objects)
       @objects = objects.dup
       @objects = clean_from_class(@objects, Projectile, true)
+      
       if (closest_projectile.x - player.x).abs < self.width
         accelerate_left if closest_projectile.x > self.x
         accelerate_right if closest_projectile.x < self.x
@@ -22,8 +23,8 @@ module AIFighter
       return objects.drop_while {|object| object.class != class_type} if opposite == true
     end
 
-    def closest_object
-      @objects.min {|a, b| (a.x - player.x).abs <=> (b.x - player.x).abs}
+    def closest_object(objects)
+      objects.min {|a, b| (a.x - self.x).abs <=> (b.x - self.x).abs}
     end
   end
 end
