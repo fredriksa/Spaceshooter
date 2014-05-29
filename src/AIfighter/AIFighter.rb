@@ -7,6 +7,14 @@ module AIFighter
       # Check if must dodge closest missile
       # Line -nearly- up with target
       # Fire at target
+
+      # If AI got property dodge_projectiles => true
+      # Dodge projectiles every 0.6 seconds
+
+      # Remove non-projectiles
+      # Remove non-threathening projectiles
+      # Get closest threathening projectile
+      # Dodge it
     end
     
     def target(target)
@@ -14,13 +22,24 @@ module AIFighter
     end
 
     def dodge_projectile
-      clean_from_class(@objects, Projectile, true)
-      closest_projectile = closest_object(@objects)     
+      projectiles = clean_from_class(@objects, Projectile, true)
+      threathening_projectiles = threathening(projectiles)
+      closest_projectile = closest_object(threatening_projectiles)     
     end
 
     def might_collide?(object)
-      object.x = self.x
+      object = object.dup
+      object.y = self.y
       rectangular_collision?(self, object)
+    end
+
+    def threatening(objects)
+      threathening_projectiles = []
+      objects.each do |object|
+        threathening_projectiles << object if might_collide?(object)
+      end
+
+      threathening_projectiles
     end
 
     def clean_from_class(objects, class_type, opposite = false)
