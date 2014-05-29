@@ -14,7 +14,8 @@ module AIFighter
     end
 
     def dodge_projectile
-      clean_from_class(@objects, Projectile, true)      
+      clean_from_class(@objects, Projectile, true)
+      cloest_projectile = closest_object(@objects)     
     end
 
     def clean_from_class(objects, class_type, opposite = false)
