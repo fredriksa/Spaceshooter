@@ -17,8 +17,8 @@ module AIFighter
       # Dodge it
     end
     
-    def target(target)
-      @target = target
+    def target(entity)
+      @target = entity
     end
 
     def dodge_projectile
