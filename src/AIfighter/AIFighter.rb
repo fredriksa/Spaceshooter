@@ -28,7 +28,8 @@ module AIFighter
     end
 
     def dodge(entity)
-    
+      accelerate_left if entity.x > self.x
+      accelerate_right if entity.x < self.x
     end
 
     def might_collide?(entity)
