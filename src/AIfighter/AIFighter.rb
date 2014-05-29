@@ -24,16 +24,16 @@ module AIFighter
     def dodge_projectile
       projectiles = clean_from_class(@objects, Projectile, true)
       threathening_projectiles = threathening(projectiles)
-      closest_projectile = closest_object(threatening_projectiles)     
+      closest_projectile = closest_entity(threatening_projectiles)     
     end
 
-    def dodge(object)
+    def dodge(entity)
     
     end
 
-    def might_collide?(object)
-      object = object.dup
-      object.y = self.y
+    def might_collide?(entity)
+      entity = entity.dup
+      entity.y = self.y
       rectangular_collision?(self, object)
     end
 
@@ -53,7 +53,7 @@ module AIFighter
       return objects
     end
 
-    def closest_object(objects)
+    def closest_entity(objects)
       objects.min {|a, b| (a.x - self.x).abs <=> (b.x - self.x).abs}
     end
   end
