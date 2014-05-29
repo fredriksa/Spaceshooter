@@ -9,6 +9,7 @@ module AIFighter
     end
 
     def update(objects)
+      @objects = objects
       dodge_projectile if @property["dodge_projectiles"]
     end
     
@@ -19,15 +20,20 @@ module AIFighter
     def dodge_projectile
       if @timer["dodge_projectiles"] > @static_timer["dodge_projectiles"]
         projectiles = clean_from_class(@objects, Projectile, true)
-        threathening_projectiles = threathening(projectiles)
+        threatening_projectiles = threatening(projectiles)
         closest_projectile = closest_entity(threatening_projectiles)
-        dodge(closest_projectile) if closest_projectile != nil
+        
+        if closest_projectile != nil
+          dodge(closest_projectile)
+          @timer["dodge_projectiles"] = 0
+        end
       else
         @timer["dodge_projectiles"] += 1
       end     
     end
 
     def dodge(entity)
+      puts "dodged"
       accelerate_left if entity.x > self.x
       accelerate_right if entity.x < self.x
     end
@@ -35,7 +41,10 @@ module AIFighter
     def might_collide?(entity)
       entity = entity.dup
       entity.y = self.y
-      rectangular_collision?(self, object)
+      puts entity.class
+      print "X: #{self.x} Y: #{self.y}, EX: #{entity.x} EY: #{entity.y}"
+      print "WIDTH: #{self.width} HEIGHT: #{self.height}, EWIDTH: #{entity.width} EHEIGHT: #{entity.height}"
+      rectangular_collision?(self, entity)
     end
 
     def threatening(objects)
@@ -49,9 +58,8 @@ module AIFighter
 
     def clean_from_class(objects, class_type, opposite = false)
       objects = objects.dup
-      objects.drop_while {|object| object.class == class_type} if opposite == false
-      objects.drop_while {|object| object.class != class_type} if opposite == true
-      return objects
+      return objects.drop_while {|object| object.class == class_type} if opposite == false
+      return objects.drop_while {|object| object.class != class_type} if opposite == true
     end
 
     def closest_entity(objects)
