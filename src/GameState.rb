@@ -15,9 +15,6 @@ class GameState
   end
 
   def update
-    @objects.each do |object|
-      object.update
-    end
     @GUI.update
   end
 
