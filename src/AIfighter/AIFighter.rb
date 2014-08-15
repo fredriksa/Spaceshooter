@@ -15,7 +15,8 @@ module AIFighter
       accelerate_left if @accelerate_left == true
       accelerate_right if @accelerate_right == true
       move_x if @x + @velocity_x > 0 && @x + @velocity_x + width < GameWindow::WIDTH
-
+      
+      #fire if @static_timer["shoot"] >= 30
       dodge_projectile if @property["dodge_projectiles"]
     end
     
