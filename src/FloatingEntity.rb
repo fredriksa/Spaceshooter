@@ -1,10 +1,11 @@
 class FloatingEntity < Entity
-  attr_accessor :velocity_x, :velocity_y 
+  attr_accessor :velocity_x, :velocity_y, :max_velocity_x, :max_velocity_y, :min_velocity_x, :min_velocity_x
   
   def initialize(images, x, y, speed, speed_damper = 1)
     super images, x, y
 
     @velocity_x, @velocity_y = 0, 0
+    @max_velocity_x, @min_velocity_x = 0, 0
     @speed = speed
     @speed_damper = speed_damper
   end
@@ -24,11 +25,21 @@ class FloatingEntity < Entity
   end
 
   def accelerate_left
-    @velocity_x -= Gosu::offset_x(90, @speed)
+    acc_vel = Gosu::offset_x(90, @speed)
+    if @velocity_x - acc_vel > @min_velocity_x
+      @velocity_x -= acc_vel
+    else 
+      @velocity_x = @min_velocity_x
+    end
   end
 
   def accelerate_right
-    @velocity_x += Gosu::offset_x(90, @speed)
+    acc_vel = Gosu::offset_x(90, @speed)
+    if @velocity_x + acc_vel < @max_velocity_x
+      @velocity_x += acc_vel
+    else 
+      @velocity_x = @max_velocity_x
+    end
   end
 
   def out_of_screen?
