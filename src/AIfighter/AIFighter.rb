@@ -55,9 +55,8 @@ module AIFighter
 
     def threatening(objects)
       threathening_projectiles = []
-      objects.each do |object|
-        threathening_projectiles << object if might_collide?(object)
-      end
+
+      objects.each {|object| threathening_projectiles << object if might_collide?(object) }
 
       threathening_projectiles
     end
