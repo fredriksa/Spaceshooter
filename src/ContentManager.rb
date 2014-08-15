@@ -22,7 +22,7 @@ class ContentManager
       end
     end
 
-    return surrounding_objects
+    surrounding_objects
   end
 
   def clean_array
