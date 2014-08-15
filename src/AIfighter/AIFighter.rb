@@ -18,6 +18,7 @@ module AIFighter
       
       #fire if @static_timer["shoot"] >= 30
       dodge_projectile if @property["dodge_projectiles"]
+      @timer.each {|key, value| @timer[key] += 1}
     end
     
     def target(entity)
