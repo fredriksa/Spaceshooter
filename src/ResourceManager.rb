@@ -23,10 +23,8 @@ class ResourceManager
     return @resources[keys[0]] if keys.size == 1
     
     acquired_resources = []
-    keys.each do |key|
-      acquired_resources << @resources[key]
-    end
-
+    keys.each {|key| acquired_resources << @resources[key]}
+    
     return acquired_resources
   end
 end
