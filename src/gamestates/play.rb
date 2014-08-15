@@ -54,10 +54,8 @@ class Play < GameState
         end
       end  
     end
-
-    @objects.each_with_index do |object, index|
-      @objects.delete_at(index) if !object.alive?
-    end
+    
+    @objects.each_with_index {|object, index| @objects.delete_at(index) if !object.alive?}
   end
 
   def handle_input(key, type)
