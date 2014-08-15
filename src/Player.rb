@@ -6,6 +6,7 @@ class Player < SpaceshipFighter
     @flame = images[3]
     @KbLeft = false
     @KbRight = false
+    @max_velocity_x, @min_velocity_x = 5, -5
     @health = hp
     @max_health = health
     @max_ammo = 50
