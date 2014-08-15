@@ -8,16 +8,12 @@ class GameState
   end
 
   def draw
-    @objects.each do |object|
-      object.draw
-    end
+    @objects.each {|object| object.draw}
     @GUI.draw
   end
 
   def update
-    @objects.each do |object|
-      object.update
-    end
+    @objects.each {|object| object.update}
     @GUI.update
   end
 
