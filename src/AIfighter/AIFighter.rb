@@ -54,11 +54,9 @@ module AIFighter
     end
 
     def threatening(objects)
-      threathening_projectiles = []
-
-      objects.each {|object| threathening_projectiles << object if might_collide?(object) }
-
-      threathening_projectiles
+      entities = []
+      objects.each {|object| entities << object if might_collide?(object) }
+      entities
     end
 
     def clean_from_class(objects, class_type, opposite = false)
