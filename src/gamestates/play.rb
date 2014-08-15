@@ -25,9 +25,9 @@ class Play < GameState
     super
     @GUI["player_health"].text = @player.health
     @GUI["player_ammo"].text = @player.ammo
-
-    @objects += @player.projectiles
     
+    @objects += @player.projectiles
+
     if @loot_spawn_counter > @loot_spawn_timer
       @objects << generate_loot
       @loot_spawn_counter = 0
