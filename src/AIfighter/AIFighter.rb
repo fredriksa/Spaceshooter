@@ -37,8 +37,6 @@ module AIFighter
           dodge(closest_projectile)
           @timer["dodge_projectiles"] = 0
         end
-      else
-        @timer["dodge_projectiles"] += 1
       end     
     end
 
