@@ -8,6 +8,11 @@ module AIFighter
       @frame_timer = @static_frame_timer.dup
     end
 
+    def draw
+      @images[@image_index].draw(@x, @y, ZOrder::Entity_Default + 1) if @images.is_a? Array
+      @images.draw(@x, @y, ZOrder::Entity_Default + 1) if @images.is_a? Gosu::Image
+    end
+
     def update(objects)
       super()
       @objects = objects
