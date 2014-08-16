@@ -8,11 +8,8 @@ class Entity
     @alive = true
     @solid = false
     
-    if images.is_a? Array
-      @width, @height = images[0].height, images[0].width
-    else
-      @width, @height = images.height, images.width
-    end
+    images = images.first if images.is_a? Array
+    @width, @height = images.height, images.width
   end
 
   def draw
