@@ -47,7 +47,7 @@ module AIFighter
         projectiles = clean_from_class(@objects, Projectile, true)
         threatening_projectiles = threatening(projectiles)
         closest_projectile = closest_entity(threatening_projectiles)
-        if closest_projectile != nil
+        if closest_projectile
           dodge(closest_projectile)
           @frame_timer["dodge_projectiles"] = 0
         end
