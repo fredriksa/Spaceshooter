@@ -1,8 +1,8 @@
 class MainMenu < GameState
   include RectangularCollision
 
-  def initialize(window)
-    super window
+  def initialize(window, sm)
+    super window, sm
     @window = window
     @GUI.set_font(@rm["hyperspace"])
     @GUI.add_text("Title", "Spaceshooter", 50, 50)
@@ -41,6 +41,14 @@ class MainMenu < GameState
   end
 
   def handle_collision
-
+    object = nil
+    @GUI.items.each {|key, element| object = key if collision_mouse?(element, @window.mouse_x, @window.mouse_y)}
+    
+    if object
+      case object
+        when "Play"
+          @sm.next
+      end
+    end
   end
 end
