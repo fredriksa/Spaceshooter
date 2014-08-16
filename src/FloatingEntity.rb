@@ -30,7 +30,7 @@ class FloatingEntity < Entity
   end
 
   def accelerate_right
-    acc_vel = Gosu::offset_x(90, @speed)
+    acc_vel = Gosu.offset_x(90, @speed)
     if @velocity_x + acc_vel < @max_velocity_x
       @velocity_x += acc_vel
     else 
