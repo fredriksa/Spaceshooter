@@ -21,7 +21,7 @@ module GUI
     end
 
     def add_text(key, text, x, y)
-      raise ArgumentError, 'Font has not been set!' if @font == nil
+      raise ArgumentError, 'Font has not been set!' unless @font
       @items[key] = Text.new(text, @font, x, y)
     end
 
