@@ -1,8 +1,8 @@
 class Play < GameState
   include RectangularCollision
 
-  def initialize(window)
-    super
+  def initialize(window, sm)
+    super window, sm
     @speed = 1
     @player = Player.new(@rm["player", "player_left", "player_right", "player_flame"], @rm["player_projectile"], GameWindow::WIDTH/2, GameWindow::HEIGHT - 80, 100, 1.5, 0.95)
     @background = Background.new(@rm["background_solid"], @rm["background_stars"], @speed, true)
