@@ -13,16 +13,6 @@ class Loot < FloatingEntity
     end
   end
 
-  def take_health
-    health, @health = @health, 0
-    health
-  end
-
-  def take_ammo
-    ammo, @ammo = @ammo, 0
-    ammo
-  end
-
   def update
     super
     die if @y > GameWindow::HEIGHT
