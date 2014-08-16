@@ -1,0 +1,5 @@
+Type -- Key -- Path -- Params     
+image   background_solid   ./assets/background_solid.png
+image   background_stars   ./assets/background_stars.png
+font    hyperspace   ./assets/HyperspaceBold.ttf 32
+font    hyperspace_24   ./assets/HyperspaceBold.ttf 24
