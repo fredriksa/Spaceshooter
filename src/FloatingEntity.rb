@@ -42,7 +42,5 @@ class FloatingEntity < Entity
     if @x > GameWindow::WIDTH || @x < 0 || @y > GameWindow::HEIGHT || @y < 0
       return true
     end
-
-    return false
   end
 end
