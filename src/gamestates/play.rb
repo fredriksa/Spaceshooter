@@ -27,6 +27,7 @@ class Play < GameState
     @GUI["player_ammo"].text = @player.ammo
     
     @objects += @player.projectiles
+    @objects += @green_fighter.projectiles
 
     if @loot_spawn_counter > @loot_spawn_timer
       @objects << generate_loot
