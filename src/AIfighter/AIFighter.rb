@@ -46,7 +46,7 @@ module AIFighter
           dodge(closest_projectile)
           @frame_timer["dodge_projectiles"] = 0
         end
-      end     
+      end  
     end
 
     def dodge(entity)
