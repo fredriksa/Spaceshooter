@@ -8,7 +8,7 @@ class Projectile < FloatingEntity
 
   def update
     super
-    die if self.out_of_screen?
     move_y
+    die if self.out_of_screen?
   end
 end
