@@ -44,7 +44,7 @@ module AIFighter
         @accelerate_left = false
         @accelerate_right = false
 
-        projectiles = clean_from_class(@objects, Projectile, true)
+        projectiles = clean_from_class(@objects, Projectile)
         threatening_projectiles = threatening(projectiles)
         closest_projectile = closest_entity(threatening_projectiles)
         if closest_projectile
@@ -71,10 +71,9 @@ module AIFighter
       entities
     end
 
-    def clean_from_class(objects, class_type, opposite = false)
+    def clean_from_class(objects, class_type)
       objects = objects.dup
-      return objects.drop_while {|object| object.class == class_type} if opposite == false
-      return objects.drop_while {|object| object.class != class_type} if opposite == true
+      objects.drop_while {|object| object.class == class_type}
     end
 
     def closest_entity(objects)
