@@ -1,6 +1,7 @@
 module GUI
   class Icon
-    attr_reader :width, :height
+    attr_reader :width, :height, :x, :y
+
     def initialize(image, x, y)
       @image = image
       @x, @y = x, y
