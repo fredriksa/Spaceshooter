@@ -44,7 +44,7 @@ module AIFighter
         @accelerate_left = false
         @accelerate_right = false
 
-        projectiles = clean_from_class(@objects, Projectile)
+        projectiles = clean_from_class(Projectile)
         threatening_projectiles = threatening(projectiles)
         closest_projectile = closest_entity(threatening_projectiles)
         if closest_projectile
@@ -65,19 +65,19 @@ module AIFighter
       rectangular_collision?(self, entity)
     end
 
-    def threatening(objects)
-      entities = objects.dup
+    def threatening(entity)
+      entities = @objects.dup
       entities.select! {|entity| entity if might_collide? entity and entity.is_a? Projectile and entity.type == "Player"}
       entities
     end
 
-    def clean_from_class(objects, class_type)
-      objects = objects.dup
+    def clean_from_class(class_type)
+      objects = @objects.dup
       objects.drop_while {|object| object.class == class_type}
     end
 
-    def closest_entity(objects)
-      objects.min {|a, b| (a.x - self.x).abs + (a.y - self.y).abs <=> (b.x - self.x).abs + (b.y - self.y)}
+    def closest_entity(entities)
+      entities.min {|a, b| (a.x - self.x).abs + (a.y - self.y).abs <=> (b.x - self.x).abs + (b.y - self.y)}
     end
   end
 end
