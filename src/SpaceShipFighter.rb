@@ -13,9 +13,9 @@ class SpaceshipFighter < FloatingEntity
     
     case type
     when "Player"
-      @projectile_y = -3
+      @projectile_y = -6
     when "Hostile"
-      @projectile_y = 3
+      @projectile_y = 6
     end
   end
 
