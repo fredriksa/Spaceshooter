@@ -1,10 +1,11 @@
 module GUI
   class Text
-    attr_accessor :x, :y, :text
+    attr_accessor :x, :y, :text, :height, :width
     def initialize(text, font, x, y)
       @text = text
       @font = font
       @x, @y = x, y
+
     end
 
     def draw
