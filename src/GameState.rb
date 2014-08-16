@@ -30,7 +30,7 @@ class GameState
 
   def load_resources
     filepath = "./src/gamestates/#{self.class.to_s}_resources.txt"
-    raise IOError, 'file does not exist #{filepath}' if !File.file?(filepath)
+    raise IOError, 'file does not exist #{filepath}' unless File.file?(filepath)
 
     data = File.readlines(filepath)
     data.delete_at(0)
