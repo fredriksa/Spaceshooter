@@ -5,9 +5,12 @@ class MainMenu < GameState
     @GUI.add_text("Title", "Spaceshooter", 50, 50)
 
     @GUI.set_font(@rm["hyperspace_24"])
-    @GUI.add_text("Play", "Play", 50, 125)
-    @GUI.add_text("Settings", "Settings", 50, 160)
-    @GUI.add_text("Multiplayer", "Multiplayer", 50, 195)
+    @GUI.add_text("Play", "Play", 50, 175)
+    @GUI.add_text("Settings", "Settings", 50, 210)
+    @GUI.add_text("Multiplayer", "Multiplayer", 50, 245)
+
+    @background = Background.new(@rm["background_solid"], @rm["background_stars"], @speed, true)
+    @objects << @background
   end
 
   def draw
@@ -16,5 +19,18 @@ class MainMenu < GameState
 
   def update
     super
+  end
+
+  def handle_input(key, type)
+    if type == "up"
+      case key
+      when Gosu::MsLeft
+        
+      end
+    end
+  end
+
+  def gui_collision?
+      
   end
 end
