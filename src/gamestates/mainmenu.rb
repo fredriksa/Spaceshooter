@@ -21,14 +21,6 @@ class MainMenu < GameState
     @objects << @background
   end
 
-  def draw
-    super
-  end
-
-  def update
-    super
-  end
-
   def handle_input(key, type)
     if type == "up"
       case key
