@@ -5,18 +5,18 @@ class ResourceManager
   end
 
   def load_image(key, path)
-    raise IOError, 'path must point to a existing file!' if !File.file?(path)
+    raise IOError, 'path must point to a existing file!' unless File.file?(path)
     @resources[key] = Gosu::Image.new(@window, path, false) if @resources[key].nil?
   end
 
   def load_font(key, path, height)
-    raise IOError, 'path must point to a existing file!' if !File.file?(path)
+    raise IOError, 'path must point to a existing file!' unless File.file?(path)
     @resources[key] = Gosu::Font.new(@window, path, height)
   end
 
   def load_spritesheet(key, path, width, height)
-    raise IOError, 'path must point to a existing file!' if !File.file?(path)
-    @resources[key] = Gosu::Image::load_tiles(@window, path, width, height, true)
+    raise IOError, 'path must point to a existing file!' unless File.file?(path)
+    @resources[key] = Gosu::Image.load_tiles(@window, path, width, height, true)
   end
   
   def [](*keys)
@@ -25,6 +25,6 @@ class ResourceManager
     acquired_resources = []
     keys.each {|key| acquired_resources << @resources[key]}
     
-    return acquired_resources
+    acquired_resources
   end
 end
