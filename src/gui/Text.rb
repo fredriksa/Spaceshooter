@@ -5,7 +5,7 @@ module GUI
       @text = text
       @font = font
       @x, @y = x, y
-
+      @height, @width = @font.height, @font.text_width(text)
     end
 
     def draw
