@@ -1,4 +1,6 @@
 class MainMenu < GameState
+  include RectangularCollision
+  
   def initialize(window)
     super window
     @GUI.set_font(@rm["hyperspace"])
@@ -32,10 +34,10 @@ class MainMenu < GameState
   end
 
   def gui_collision?
-    
+    @GUI.items.each {|key, value| }
   end
 
   def handle_collision
-    
+
   end
 end
