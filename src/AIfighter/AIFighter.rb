@@ -4,21 +4,30 @@ module AIFighter
     def initialize(images, projectile_image, x, y, speed, type, dodge_projectiles = true, speed_damper = 0.95)
       super images, projectile_image, x, y, speed, type, speed_damper
       @property = {"dodge_projectiles" => dodge_projectiles}
-      @static_timer = {"dodge_projectiles" => 5, "shoot" => 30}
-      @timer = @static_timer.dup
+      @static_frame_timer = {"dodge_projectiles" => 5, "shoot" => 30}
+      @frame_timer = @static_frame_timer.dup
     end
 
     def update(objects)
       super()
       @objects = objects
       
+      # Movement
       accelerate_left if @accelerate_left == true
       accelerate_right if @accelerate_right == true
       move_x if @x + @velocity_x > 0 && @x + @velocity_x + width < GameWindow::WIDTH
       
-      #fire if @static_timer["shoot"] >= 30
+      # Shoot
+      if @frame_timer["shoot"] >= @static_frame_timer["shoot"]
+        fire
+        @frame_timer["shoot"] = 0
+      end
+
+
+      # Dodge
       dodge_projectile if @property["dodge_projectiles"]
-      @timer.each {|key, value| @timer[key] += 1}
+      
+      @frame_timer.each {|key, value| @frame_timer[key] += 1}
     end
     
     def target(entity)
@@ -26,7 +35,7 @@ module AIFighter
     end
 
     def dodge_projectile
-      if @timer["dodge_projectiles"] > @static_timer["dodge_projectiles"]
+      if @frame_timer["dodge_projectiles"] > @static_frame_timer["dodge_projectiles"]
         @accelerate_left = false
         @accelerate_right = false
 
@@ -35,7 +44,7 @@ module AIFighter
         closest_projectile = closest_entity(threatening_projectiles)
         if closest_projectile != nil
           dodge(closest_projectile)
-          @timer["dodge_projectiles"] = 0
+          @frame_timer["dodge_projectiles"] = 0
         end
       end     
     end
