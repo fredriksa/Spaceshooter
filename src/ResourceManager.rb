@@ -1,6 +1,6 @@
 class ResourceManager
   def initialize(window)
-  	@window = window
+    @window = window
     @resources = {}
   end
 
