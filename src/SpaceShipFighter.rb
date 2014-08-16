@@ -21,7 +21,7 @@ class SpaceshipFighter < FloatingEntity
 
   def draw
     super
-    @projectiles.each {|projecitle| projectile.draw if projectile.alive?}
+    @projectiles.each {|projectile| projectile.draw if projectile.alive?}
   end
 
   def update
