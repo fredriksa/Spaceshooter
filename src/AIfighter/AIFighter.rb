@@ -62,7 +62,7 @@ module AIFighter
 
     def threatening(objects)
       entities = []
-      objects.each {|object| entities << object if might_collide?(object) }
+      objects.each {|object| entities << object if might_collide? object and object.is_a? Projectile and object.type == "Player"}
       entities
     end
 
