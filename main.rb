@@ -25,6 +25,7 @@ require_relative 'src/Player.rb'
 require_relative 'src/Background.rb'
 
 require_relative 'src/gamestates/play.rb'
+require_relative 'src/gamestates/mainmenu.rb'
 
 module ZOrder
   GUI_Text = 1505
