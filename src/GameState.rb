@@ -1,6 +1,7 @@
 class GameState
-  def initialize(window)
+  def initialize(window, sm)
     @objects = []
+    @sm = sm
     @rm = ResourceManager.new(window)
     @cm = ContentManager.new
     @GUI = GUI::GUI.new
