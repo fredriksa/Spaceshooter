@@ -15,8 +15,8 @@ class Loot < FloatingEntity
 
   def update
     super
-    die if @y > GameWindow::HEIGHT
     move_y
+    die if @y > GameWindow::HEIGHT
   end
 
   def on_collide
