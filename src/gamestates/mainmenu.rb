@@ -32,6 +32,10 @@ class MainMenu < GameState
   end
 
   def gui_collision?
+    
+  end
 
+  def handle_collision
+    
   end
 end
