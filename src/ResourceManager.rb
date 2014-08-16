@@ -22,9 +22,6 @@ class ResourceManager
   def [](*keys)
     return @resources[keys[0]] if keys.size == 1
     
-    acquired_resources = []
-    keys.each {|key| acquired_resources << @resources[key]}
-    
-    acquired_resources
+    acquired_resources = keys.map {|key| @resources[key]}
   end
 end
