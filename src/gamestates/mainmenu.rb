@@ -9,9 +9,13 @@ class MainMenu < GameState
     @GUI.add_icon("white_rectangle_183px", @rm["white_rectangle_183px"], 50, 85)
 
     @GUI.set_font(@rm["hyperspace_24"])
+    
     @GUI.add_text("Play", "Play", 50, 175)
     @GUI.add_text("Settings", "Settings", 50, 210)
     @GUI.add_text("Multiplayer", "Multiplayer", 50, 245)
+
+    @GUI.set_font(@rm["hyperspace_14"])
+    @GUI.add_text("Version", "0.01a", 250, 80)
 
     @background = Background.new(@rm["background_solid"], @rm["background_stars"], @speed, true)
     @objects << @background
