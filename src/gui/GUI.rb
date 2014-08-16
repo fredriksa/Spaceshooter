@@ -8,16 +8,12 @@ module GUI
 
     def draw
       if @visible and @items.size > 0
-        @items.each do |key, value|
-          value.draw
-        end
+        @items.each {|key, value| value.draw}
       end
     end
 
     def update
-      @items.each do |key, value|
-        value.update
-      end
+      @items.each {|key, value| value.update}
     end
 
     def set_font(font)
