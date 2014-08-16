@@ -26,8 +26,8 @@ class Play < GameState
     @GUI["player_health"].text = @player.health
     @GUI["player_ammo"].text = @player.ammo
     
-    @objects += @player.projectiles
-    @objects += @green_fighter.projectiles
+    @player.projectiles.each {|projectile| @objects << projectile if !@objects.include? projectile}
+    @green_fighter.projectiles.each {|projectile| @objects << projectile if !@objects.include? projectile}
 
     if @loot_spawn_counter > @loot_spawn_timer
       @objects << generate_loot
