@@ -10,10 +10,6 @@ class FloatingEntity < Entity
     @speed_damper = speed_damper
   end
 
-  def update
-    super
-  end
-
   def move_x
     @x += @velocity_x
     @velocity_x *= @speed_damper
@@ -25,7 +21,7 @@ class FloatingEntity < Entity
   end
 
   def accelerate_left
-    acc_vel = Gosu::offset_x(90, @speed)
+    acc_vel = Gosu.offset_x(90, @speed)
     if @velocity_x - acc_vel > @min_velocity_x
       @velocity_x -= acc_vel
     else 
