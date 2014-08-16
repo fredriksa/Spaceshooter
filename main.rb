@@ -44,8 +44,8 @@ class GameWindow < Gosu::Window
     self.caption = NAME
 
     @state_manager = GameStateManager.new(self)
-    @state_manager.add(MainMenu.new(self))
-    @state_manager.add(Play.new(self))
+    @state_manager.add(MainMenu.new(self, @state_manager))
+    @state_manager.add(Play.new(self, @state_manager))
   end
   
   def draw
