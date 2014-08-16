@@ -45,7 +45,7 @@ module AIFighter
         @accelerate_right = false
 
         projectiles = clean_from_class(Projectile)
-        threatening_projectiles = threatening(projectiles)
+        threatening_projectiles = threatening
         closest_projectile = closest_entity(threatening_projectiles)
         if closest_projectile
           dodge(closest_projectile)
@@ -65,7 +65,7 @@ module AIFighter
       rectangular_collision?(self, entity)
     end
 
-    def threatening(entity)
+    def threatening
       entities = @objects.dup
       entities.select! {|entity| entity if might_collide? entity and entity.is_a? Projectile and entity.type == "Player"}
       entities
