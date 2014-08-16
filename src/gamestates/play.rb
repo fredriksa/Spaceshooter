@@ -26,8 +26,9 @@ class Play < GameState
     @GUI["player_health"].text = @player.health
     @GUI["player_ammo"].text = @player.ammo
     
-    @player.projectiles.each {|projectile| @objects << projectile if !@objects.include? projectile}
-    @green_fighter.projectiles.each {|projectile| @objects << projectile if !@objects.include? projectile}
+    # 'Sync' contents of string. Only adds projectiles which has not already been added.
+    @objects |= @player.projectiles
+    @objects |= @green_fighter.projectiles
 
     if @loot_spawn_counter > @loot_spawn_timer
       @objects << generate_loot
@@ -56,7 +57,7 @@ class Play < GameState
       end  
     end
     
-    @objects.each_with_index {|object, index| @objects.delete_at(index) if !object.alive?}
+    @objects.select!(&:alive?)
   end
 
   def handle_input(key, type)
