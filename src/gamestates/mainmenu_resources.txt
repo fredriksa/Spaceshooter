@@ -4,3 +4,4 @@ image   background_stars   ./assets/background_stars.png
 image   white_rectangle_183px ./assets/white_rectangle_183px.png
 font    hyperspace   ./assets/HyperspaceBold.ttf 32
 font    hyperspace_24   ./assets/HyperspaceBold.ttf 24
+font    hyperspace_14    ./assets/HyperspaceBold.ttf 14
