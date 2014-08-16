@@ -13,12 +13,12 @@ class Loot < FloatingEntity
     end
   end
 
-  def get_health
+  def take_health
     health, @health = @health, 0
     health
   end
 
-  def get_ammo
+  def take_ammo
     ammo, @ammo = @ammo, 0
     ammo
   end
