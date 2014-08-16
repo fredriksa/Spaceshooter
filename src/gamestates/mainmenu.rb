@@ -1,4 +1,4 @@
-class Menu < GameState
+class MainMenu < GameState
   def draw
     super
   end
