@@ -1,5 +1,6 @@
 module GUI
   class GUI
+    attr_reader :items
     def initialize(visible = true)
       @visible = visible
       @items = {}
