@@ -51,8 +51,10 @@ class Play < GameState
         case object.type
         when "Health"
           @player.health += object.loot_health if @player.health + object.loot_health <= @player.max_health
+          @player.health = @player.max_health if @player.health + object.loot_health >= @player.max_health
         when "Ammo"
           @player.ammo += object.loot_ammo if @player.ammo + object.loot_ammo <= @player.max_ammo
+          @player.ammo = @player.max_ammo if @player.health + object.loot_ammo >= @player.max_ammo
         end
       end  
     end
