@@ -5,6 +5,7 @@ require_relative 'src/GameState.rb'
 require_relative 'src/ResourceManager.rb'
 require_relative 'src/ContentManager.rb'
 require_relative 'src/RectangularCollisionModule.rb'
+require_relative 'src/Vec2.rb'
 
 require_relative 'src/Entity.rb'
 require_relative 'src/FloatingEntity.rb'
